@@ -26,15 +26,13 @@ export class Analytics {
       key += `::${getDate()}`;
     }
 
-    //db call to persist this event
+    // db call to persist this event
     await redis.hincrby(key, JSON.stringify(event), 1);
-
     if (!opts?.persist) await redis.expire(key, this.retention);
   }
 
   async retrieveDays(namespace: string, nDays: number) {
     type AnalyticsPromise = ReturnType<typeof analytics.retrieve>;
-
     const promises: AnalyticsPromise[] = [];
 
     for (let i = 0; i < nDays; i++) {
@@ -56,7 +54,7 @@ export class Analytics {
       }
     });
 
-    return data
+    return data;
   }
 
   async retrieve(namespace: string, date: string) {
