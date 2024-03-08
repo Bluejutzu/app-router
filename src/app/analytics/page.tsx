@@ -64,7 +64,7 @@ const Page = async () => {
     .slice(0, 5);
 
   return (
-    <div className='min-h-screen w-full py-12 flex justify-center items-center'>
+    <div className='dark bg-[#020817] min-h-screen w-full py-12 flex justify-center items-center'>
       <div className='relative w-full max-w-6xl mx-auto text-white'>
         <AnalyticsDashboard
           avgVisitorsPerDay={avgVisitorsPerDay}

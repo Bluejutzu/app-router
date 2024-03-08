@@ -3,11 +3,12 @@
 import Hero from "@/components/Hero";
 import React from "react";
 
-export default function page() {
+// const wait = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
+
+export default async function page() {
   return (
     <main>
       <Hero />
-      
     </main>
   );
 }

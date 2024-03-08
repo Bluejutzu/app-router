@@ -9,21 +9,21 @@ import {
   RegisterLink,
   LoginLink,
 } from "@kinde-oss/kinde-auth-nextjs/components";
-import typescriptpng from "../../public/images/TypescriptPNG.png"
+import typescriptpng from "../../public/images/TypescriptPNG.png";
 import tailwindsvg from "../../public/images/TailwindcssPNG.svg";
 
 const navigation = [
-  { name: "Product", href: "#" },
+  { name: "Product", href: "/product" },
   { name: "Features", href: "#" },
-  { name: "Marketplace", href: "#" },
-  { name: "Company", href: "#" },
+  { name: "Dashboard", href: "/analytics" },
+  { name: "About Us", href: "#" },
 ];
 
 export default function Hero() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <div className='bg-white'>
+    <div className='bg-white cursor-default'>
       <header className='absolute inset-x-0 top-0 z-50'>
         <nav
           className='flex items-center justify-between p-6 lg:px-8'
@@ -41,7 +41,7 @@ export default function Hero() {
           <div className='flex lg:hidden'>
             <button
               type='button'
-              className='-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700'
+              className='-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-200'
               onClick={() => setMobileMenuOpen(true)}>
               <span className='sr-only'>Open main menu</span>
               <Bars3Icon className='h-6 w-6' aria-hidden='true' />
@@ -62,7 +62,7 @@ export default function Hero() {
               Sign Up{" "}
             </RegisterLink>
 
-            <LoginLink className='rounded-md px-3.5 py-2.5 text-sm font-semibold text-gray-900 hover:bg-gray-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600'>
+            <LoginLink className='rounded-md px-3.5 py-2.5 text-sm font-semibold text-white hover:bg-gray-200 hover:text-black duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600'>
               Log In{" "}
             </LoginLink>
           </div>
@@ -92,17 +92,7 @@ export default function Hero() {
               </button>
             </div>
             <div className='mt-6 flow-root'>
-              <div className='-my-6 divide-y divide-gray-500/10'>
-                <div className='space-y-2 py-6'>
-                  {navigation.map((item) => (
-                    <a
-                      key={item.name}
-                      href={item.href}
-                      className='-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50'>
-                      {item.name}
-                    </a>
-                  ))}
-                </div>
+              <div className='-my-6 text-white'>
                 <div className='py-6'>
                   <LoginLink className='-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50'>
                     Log In
@@ -152,24 +142,19 @@ export default function Hero() {
                 className='rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600'>
                 Get started
               </a>
-              <a
-                href='#'
-                className='text-sm font-semibold leading-6 text-gray-900'>
-                Learn more <span aria-hidden='true'>→</span>
-              </a>
             </div>
           </div>
         </div>
         <div className='mx-auto max-w-2xl py-32 sm:py-48 lg:py-56'>
           <div className='hidden sm:mb-8 sm:flex sm:justify-center'></div>
           <div className='text-center'>
-            <h1 className='text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl'>
+            <h1 className='group text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl'>
               Written in{" "}
               <a
                 href='https://typescriptlang.org/'
-                className='hover:text-blue-600'>
-                Typescript <img src="" alt="" />
-              </a>{" "}
+                className='hover:text-blue-600 group-hover:display-none'>
+                Typescript
+              </a>
             </h1>
           </div>
         </div>
