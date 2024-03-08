@@ -3,12 +3,11 @@
 import Hero from "@/components/Hero";
 import React from "react";
 
-const page = () => {
+export default function page() {
   return (
     <main>
-      <Hero/>
-  </main>
-  )
-};
-
-export default page;
+      <Hero />
+      
+    </main>
+  );
+}
