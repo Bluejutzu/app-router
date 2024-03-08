@@ -23,7 +23,7 @@ export default function Hero() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <div className='bg-white cursor-default'>
+    <div className='bg-gray-900 text-white cursor-default'>
       <header className='absolute inset-x-0 top-0 z-50'>
         <nav
           className='flex items-center justify-between p-6 lg:px-8'
@@ -52,7 +52,7 @@ export default function Hero() {
               <a
                 key={item.name}
                 href={item.href}
-                className='text-sm font-semibold leading-6 text-gray-900'>
+                className='text-sm font-semibold leading-6 text-zinc-300'>
                 {item.name}
               </a>
             ))}
@@ -108,7 +108,7 @@ export default function Hero() {
         </Dialog>
       </header>
 
-      <div className='relative isolate px-6 pt-14 lg:px-8'>
+      <div className='isolate px-6 pt-14 lg:px-8'>
         <div
           className='absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80'
           aria-hidden='true'>
@@ -123,36 +123,36 @@ export default function Hero() {
         <div className='mx-auto max-w-2xl py-32 sm:py-48 lg:py-56'>
           <div className='hidden sm:mb-8 sm:flex sm:justify-center'></div>
           <div className='text-center'>
-            <h1 className='text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl'>
+            <h1 className='text-4xl font-bold tracking-tight text-white sm:text-6xl'>
               Made with{" "}
-              <a href='https://tailwindcss.com' className='hover:text-blue-300'>
+              <a
+                href='https://tailwindcss.com'
+                className='text-white hover:text-blue-300'>
                 TailwindCSS
               </a>{" "}
-              <a href='https://nextjs.org' className='hover:text-zinc-400'>
+              <a
+                href='https://nextjs.org'
+                className='text-white hover:text-zinc-600'>
                 NextJS
               </a>{" "}
-              <a href='https://react.dev/' className='hover:text-indigo-700'>
+              <a
+                href='https://react.dev/'
+                className='text-white hover:text-indigo-600'>
                 ReactJS
               </a>
             </h1>
             <p className='mt-6 text-lg leading-8 text-gray-600'></p>
-            <div className='mt-10 flex items-center justify-center gap-x-6'>
-              <a
-                href='#'
-                className='rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600'>
-                Get started
-              </a>
-            </div>
+            <div className='mt-10 flex items-center justify-center gap-x-6'></div>
           </div>
         </div>
-        <div className='mx-auto max-w-2xl py-32 sm:py-48 lg:py-56'>
+        <div className='mx-auto max-w-2xl py-32 sm:py-48 lg:py-56 '>
           <div className='hidden sm:mb-8 sm:flex sm:justify-center'></div>
           <div className='text-center'>
-            <h1 className='group text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl'>
+            <h1 className='group text-4xl font-bold tracking-tight text-white sm:text-6xl'>
               Written in{" "}
               <a
                 href='https://typescriptlang.org/'
-                className='hover:text-blue-600 group-hover:display-none'>
+                className='text-white hover:text-blue-600 group-hover:display-none'>
                 Typescript
               </a>
             </h1>
