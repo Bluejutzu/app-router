@@ -13,9 +13,8 @@ import typescriptpng from "../../public/images/TypescriptPNG.png";
 import tailwindsvg from "../../public/images/TailwindcssPNG.svg";
 
 const navigation = [
-  { name: "Product", href: "/product" },
+  { name: "Our Experiences", href: "/experiences" },
   { name: "Features", href: "#" },
-  { name: "Dashboard", href: "/analytics" },
   { name: "About Us", href: "#" },
 ];
 
