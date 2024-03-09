@@ -4,13 +4,11 @@
 import { useState } from "react";
 import { Dialog } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-import {
+/* import {
   LogoutLink,
   RegisterLink,
   LoginLink,
-} from "@kinde-oss/kinde-auth-nextjs/components";
-import typescriptpng from "../../public/images/TypescriptPNG.png";
-import tailwindsvg from "../../public/images/TailwindcssPNG.svg";
+} from "@kinde-oss/kinde-auth-nextjs/components"; */
 
 const navigation = [
   { name: "Our Experiences", href: "/experiences" },
@@ -28,7 +26,7 @@ export default function Hero() {
           className='flex items-center justify-between p-6 lg:px-8'
           aria-label='Global'>
           <div className='flex lg:flex-1'>
-            <a href='#' className='-m-1.5 p-1.5'>
+            <a href='/' className='-m-1.5 p-1.5'>
               <span className='sr-only'>Bluejutzu</span>
               <img
                 className='h-8 w-auto'
@@ -57,13 +55,7 @@ export default function Hero() {
             ))}
           </div>
           <div className='hidden lg:flex lg:flex-1 lg:justify-end'>
-            <RegisterLink className='rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600'>
-              Sign Up{" "}
-            </RegisterLink>
-
-            <LoginLink className='font-bold rounded-md px-3.5 py-2.5 text-sm text-white hover:bg-gray-200 hover:text-black duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600'>
-              Log In{" "}
-            </LoginLink>
+            <p className='text-gray-500'>Account creation/login disabled</p>
           </div>
         </nav>
         <Dialog
@@ -91,15 +83,11 @@ export default function Hero() {
               </button>
             </div>
             <div className='mt-6 flow-root'>
-              <div className='-my-6 text-white'>
+              <div className='-my-6 text-black'>
                 <div className='py-6'>
-                  <LoginLink className='-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50'>
-                    Log In
-                  </LoginLink>
-
-                  <RegisterLink className='-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 bg-indigo-600 text-white hover:bg-indigo-500'>
-                    Sign Up
-                  </RegisterLink>
+                  <p className='text-gray-500'>
+                    Account creation/login disabled
+                  </p>
                 </div>
               </div>
             </div>
