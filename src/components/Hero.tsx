@@ -11,7 +11,7 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 } from "@kinde-oss/kinde-auth-nextjs/components"; */
 
 const navigation = [
-  { name: "Our Experiences", href: "/experiences" },
+  { name: "What we offer", href: "/experiences" },
   { name: "Features", href: "#" },
   { name: "About Us", href: "#" },
 ];
@@ -27,7 +27,7 @@ export default function Hero() {
           aria-label='Global'>
           <div className='flex lg:flex-1'>
             <a href='/' className='-m-1.5 p-1.5'>
-              <span className='sr-only'>Bluejutzu</span>
+              <span className='sr-only'>Your Company</span>
               <img
                 className='h-8 w-auto'
                 src='https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600'
