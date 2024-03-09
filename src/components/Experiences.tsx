@@ -13,11 +13,12 @@ import Image from "next/image";
 import { ERLCTEXT, FiveMtext } from "../../public/images/index.ts";
 
 const navigation = [
+  { name: "What we offer", href: "/experiences" },
   { name: "Features", href: "#" },
   { name: "About Us", href: "#" },
 ];
 
-export default function Hero() {
+export default function FiveM() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
@@ -113,11 +114,18 @@ export default function Hero() {
           <div className='text-center  px-6'>
             <h1 className='text-4xl font-bold tracking-tight text-white sm:text-6xl '>
               <Image src={ERLCTEXT} alt='Emergency Response: Liberty County' />
-              <a href='#'>
-                <p className='text-2xl hover:cursor-pointer'>
-                  Click here to join!
-                </p>
-              </a>
+              <div className='relative flex-wrap mx-auto '>
+                <a href='#'>
+                  <p className='text-2xl hover:cursor-pointer my-2'>
+                    Click here to join!
+                  </p>
+                </a>
+                <a href='experiences/erlc'>
+                  <p className='bg-indigo-700 p-1 rounded-lg text-2xl hover:cursor-pointer my-2'>
+                    Learn More
+                  </p>
+                </a>
+              </div>
               <hr className='h-px p-1 rounded-md my-8 bg-gray-200 border-0 dark:bg-gray-400' />
             </h1>
             <p className='mt-6 text-lg leading-8 text-gray-100 p-1 overflow-clip'>
@@ -134,11 +142,18 @@ export default function Hero() {
           <div className='text-center  py-10'>
             <h1 className='text-4xl font-bold tracking-tight text-white sm:text-6xl '>
               <Image src={FiveMtext} alt='Emergency Response: Liberty County' />
-              <a href='#'>
-                <p className='text-2xl hover:cursor-pointer my-2'>
-                  Click here to join!
-                </p>
-              </a>
+              <div className='relative flex-wrap mx-auto '>
+                <a href='#'>
+                  <p className='text-2xl hover:cursor-pointer my-2'>
+                    Click here to join!
+                  </p>
+                </a>
+                <a href='experiences/fivem'>
+                  <p className='bg-indigo-700 p-1 rounded-lg text-2xl hover:cursor-pointer my-2'>
+                    Learn More
+                  </p>
+                </a>
+              </div>
               <hr className='h-px p-1 rounded-md my-8 bg-gray-200 border-0 dark:bg-gray-400' />
             </h1>
             <p className='mt-6 text-lg leading-8 text-gray-100 p-1'>

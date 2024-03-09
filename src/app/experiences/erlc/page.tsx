@@ -1,11 +1,9 @@
-import React from 'react'
+/** @format */
+
+import React from "react";
 
 const page = () => {
-  return (
-    <div>
-      w
-    </div>
-  )
-}
+  return <div>erlc</div>;
+};
 
-export default page
+export default page;

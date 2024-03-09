@@ -1,12 +1,12 @@
 /** @format */
 
-import Hero2 from "@/components/Experiences";
+import FiveM from "@/components/FiveM";
 import React from "react";
 
 export default function page() {
   return (
     <div>
-      <Hero2 />
+      <FiveM />
     </div>
   );
 }

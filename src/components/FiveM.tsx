@@ -4,11 +4,13 @@
 import { useState } from "react";
 import { Dialog } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import Image from "next/image";
 /* import {
   LogoutLink,
   RegisterLink,
   LoginLink,
 } from "@kinde-oss/kinde-auth-nextjs/components"; */
+import { ERLCTEXT, FiveMtext } from "../../public/images/index.ts";
 
 const navigation = [
   { name: "What we offer", href: "/experiences" },
@@ -16,7 +18,7 @@ const navigation = [
   { name: "About Us", href: "#" },
 ];
 
-export default function Hero() {
+export default function FiveM() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
@@ -66,7 +68,7 @@ export default function Hero() {
           <div className='fixed inset-0 z-50' />
           <Dialog.Panel className='fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10'>
             <div className='flex items-center justify-between'>
-              <a href='#' className='-m-1.5 p-1.5'>
+              <a href='/wadadw' className='-m-1.5 p-1.5'>
                 <span className='sr-only'>Bluejutzu</span>
                 <img
                   className='h-8 w-auto'
@@ -107,28 +109,31 @@ export default function Hero() {
             }}
           />
         </div>
-        <div className='mx-auto max-w-2xl py-32 sm:py-48 lg:py-56'>
+        <div className='mx-auto max-w-6xl px-10 sm:py-10 lg:py-2 lg:my-20 px-100 hover:max-w-5xl bg-slate-600/30 rounded-2xl hover:bg-gradient-to-r hover:from-[#A40A0F] hover:to-[#FF9139]/20 duration-300'>
           <div className='hidden sm:mb-8 sm:flex sm:justify-center'></div>
-          <div className='text-center'>
-            <h1 className='text-4xl font-bold tracking-tight text-white sm:text-6xl'>
-              Made with{" "}
-              <a
-                href='https://tailwindcss.com'
-                className='text-white hover:text-blue-300 duration-150'>
-                TailwindCSS
-              </a>{" "}
-              <a
-                href='https://nextjs.org'
-                className='text-white hover:text-zinc-600 duration-150'>
-                NextJS
-              </a>{" "}
-              <a
-                href='https://react.dev/'
-                className='text-white hover:text-indigo-600 duration-150'>
-                ReactJS
-              </a>
+          <div className='text-center  py-10'>
+            <h1 className='text-4xl font-bold tracking-tight text-white sm:text-6xl '>
+              <Image src={FiveMtext} alt='Emergency Response: Liberty County' />
+              <div className='relative flex-wrap mx-auto '>
+                <a href='#'>
+                  <p className='text-2xl hover:cursor-pointer my-2'>
+                    Click here to join!
+                  </p>
+                </a>
+                <a href='#'>
+                  <p className='bg-indigo-700 p-1 rounded-lg text-2xl hover:cursor-pointer my-2'>
+                    Learn More
+                  </p>
+                </a>
+              </div>
+              <hr className='h-px p-1 rounded-md my-8 bg-gray-200 border-0 dark:bg-gray-400' />
             </h1>
-            <p className='mt-6 text-lg leading-8 text-gray-600'></p>
+            <p className='mt-6 text-lg leading-8 text-gray-100 p-1'>
+              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+              nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+              erat, sed diam voluptua. At vero eos et accusam et justo duo
+              dolores et ea rebum. Stet clita kasd
+            </p>
             <div className='mt-10 flex items-center justify-center gap-x-6'></div>
           </div>
         </div>
