@@ -118,12 +118,12 @@ export default function Hero() {
             }}
           />
         </div>
-        <div className='mx-auto max-w-3xl my-20 py-32 sm:py-10 lg:py-2 px-100 hover:max-w-5xl bg-slate-600/30 rounded-2xl hover:bg-gradient-to-r hover:from-[#4EABEE] hover:to-[#DE151B]/20 duration-300'>
+        <div className='mx-auto max-w-3xl my-20 py-2 sm:py-2 lg:py-2 px-100 hover:max-w-5xl bg-slate-600/30 rounded-2xl hover:bg-gradient-to-r hover:from-[#4EABEE] hover:to-[#DE151B]/20 duration-300'>
           <div className='hidden sm:mb-8 sm:flex sm:justify-center'></div>
           <div className='text-center  px-6'>
             <h1 className='text-4xl font-bold tracking-tight text-white sm:text-6xl '>
               <Image src={ERLCTEXT} alt='Emergency Response: Liberty County' />
-              <a href='https://policeroleplay.community/'>
+              <a href='#'>
                 <p className='text-2xl hover:cursor-pointer'>
                   Click here to join!
                 </p>
@@ -139,12 +139,12 @@ export default function Hero() {
             <div className='mt-10 flex items-center justify-center gap-x-6'></div>
           </div>
         </div>
-        <div className='mx-auto max-w-3xl  py-32 sm:py-10 lg:py-1 px-100 hover:max-w-5xl bg-slate-600/30 rounded-2xl hover:bg-gradient-to-r hover:from-[#A40A0F] hover:to-[#FF9139]/20 duration-300'>
+        <div className='mx-auto max-w-3xl  py-2 sm:py-10 lg:py-1 px-100 hover:max-w-5xl bg-slate-600/30 rounded-2xl hover:bg-gradient-to-r hover:from-[#A40A0F] hover:to-[#FF9139]/20 duration-300'>
           <div className='hidden sm:mb-8 sm:flex sm:justify-center'></div>
           <div className='text-center  py-10'>
             <h1 className='text-4xl font-bold tracking-tight text-white sm:text-6xl '>
               <Image src={FiveMtext} alt='Emergency Response: Liberty County' />
-              <a href='https://policeroleplay.community/'>
+              <a href='#'>
                 <p className='text-2xl hover:cursor-pointer my-2'>
                   Click here to join!
                 </p>
