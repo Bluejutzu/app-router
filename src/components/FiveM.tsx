@@ -109,7 +109,7 @@ export default function FiveM() {
             }}
           />
         </div>
-        <div className='mx-auto max-w-6xl px-10 sm:py-10 lg:py-2 lg:my-20 px-100 hover:max-w-5xl bg-slate-600/30 rounded-2xl hover:bg-gradient-to-r hover:from-[#A40A0F] hover:to-[#FF9139]/20 duration-300'>
+        <div className='mx-auto max-w-6xl px-10 sm:py-10 lg:py-2 lg:my-20 px-100 rounded-2xl bg-gradient-to-r from-[#A40A0F]/50 to-[#FF9139]/40 shadow-2xl'>
           <div className='hidden sm:mb-8 sm:flex sm:justify-center'></div>
           <div className='text-center  py-10'>
             <h1 className='text-4xl font-bold tracking-tight text-white sm:text-6xl '>
@@ -121,7 +121,7 @@ export default function FiveM() {
                   </p>
                 </a>
                 <a href='#'>
-                  <p className='bg-indigo-700 p-1 rounded-lg text-2xl hover:cursor-pointer my-2'>
+                  <p className='bg-indigo-900 p-1 rounded-lg text-2xl hover:cursor-pointer my-2 bg-gradient-to-tr hover:shadow-xl hover:from-[#7e22ce] from-40% hover:to-[#f25cff] duration-700'>
                     Learn More
                   </p>
                 </a>
