@@ -50,7 +50,7 @@ export function InputForm() {
         headers: {
           "Content-Type": "application/json",
         },
-        url: `https://discord.com/api/v10/webhooks/1216394063721529434`,
+        url: "https://discord.com/api/v10/webhooks/1216394063721529434",
         data: {
           content: suggestion,
         },
