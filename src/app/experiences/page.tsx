@@ -1,12 +1,14 @@
 /** @format */
 
-import Hero2 from "@/components/Experiences";
+import Experiences from "@/components/Experiences";
+import Navbar from "@/components/Navbar";
 import React from "react";
 
 export default function page() {
   return (
     <div>
-      <Hero2 />
+      <Navbar />
+      <Experiences />
     </div>
   );
 }
