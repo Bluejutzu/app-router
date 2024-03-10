@@ -70,7 +70,7 @@ export default function Experiences() {
               <Image src={FiveMtext} alt='Emergency Response: Liberty County' />
               <div className='relative flex-wrap mx-auto '>
                 <a href='#'>
-                  <p className='text-2xl hover:cursor-pointer my-2'>
+                  <p className='text-xl text-white/80 hover:cursor-pointer hover:text-white my-2'>
                     Click here to join!
                   </p>
                 </a>
