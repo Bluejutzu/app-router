@@ -1,7 +1,6 @@
 /** @format */
 
-import Hero from "@/components/Hero";
-import Navbar from "@/components/Navbar";
+import { Hero, Navbar } from "@/components";
 import React from "react";
 
 // const wait = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));

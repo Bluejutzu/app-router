@@ -16,6 +16,7 @@ const navigation = [
   { name: "What we offer", href: "/experiences" },
   { name: "Communications", href: "/socials/communications" },
   { name: "About Us", href: "#" },
+  { name: "Suggestions!", href: "/api/support/submit-a-suggestion" },
 ];
 
 export default function Navbar() {
