@@ -53,6 +53,11 @@ const SpringModal = ({
               <div className='flex gap-2'>
                 <button
                   onClick={() => setIsOpen(false)}
+                  className='bg-transparent hover:bg-white/10 transition-colors text-white font-semibold w-full py-2 rounded'>
+                  Nah, go back
+                </button>
+                <button
+                  onClick={() => setIsOpen(false)}
                   className='bg-white hover:opacity-90 transition-opacity text-indigo-600 font-semibold w-full py-2 rounded'>
                   Understood!
                 </button>

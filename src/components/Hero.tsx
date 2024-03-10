@@ -1,23 +1,8 @@
 /** @format */
 "use client";
 
-import { useState } from "react";
-import { Dialog } from "@headlessui/react";
-import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-/* import {
-  LogoutLink,
-  RegisterLink,
-  LoginLink,
-} from "@kinde-oss/kinde-auth-nextjs/components"; */
-
-const navigation = [
-  { name: "What we offer", href: "/experiences" },
-  { name: "Communications", href: "/socials/communications" },
-  { name: "About Us", href: "#" },
-];
-
 export default function Hero() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+ 
 
   return (
     <div className='bg-gray-900 text-white cursor-default'>
