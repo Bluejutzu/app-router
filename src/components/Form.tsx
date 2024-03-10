@@ -45,7 +45,7 @@ export function InputForm() {
       });
 
       const suggestion = JSON.stringify(data);
-      /*const req = await axios.request({
+      const req = await axios.request({
         method: "get",
         headers: {
           "Content-Type": "application/json",
@@ -56,7 +56,7 @@ export function InputForm() {
         },
       });
       const res = JSON.stringify(req)
-      console.log(res); */
+      console.log(res); 
     } catch (error) {}
     console.log(
       `You submitted the following values: \n ${JSON.stringify(data)}`
@@ -82,7 +82,7 @@ export function InputForm() {
                 />
               </FormControl>
               <FormDescription>
-                Say whatever you'd like us to add!
+                Say whatever you would like us to add!
               </FormDescription>
               <FormMessage />
             </FormItem>
