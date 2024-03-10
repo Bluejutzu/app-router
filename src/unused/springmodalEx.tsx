@@ -1,10 +1,11 @@
 /** @format */
+"use client"
 
 import { AnimatePresence, motion } from "framer-motion";
 import { FiAlertCircle } from "react-icons/fi";
 import { useState } from "react";
 
-export default function ModalWrapper() {
+function ModalWrapper() {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <div className='m-1 grid place-content-center'>

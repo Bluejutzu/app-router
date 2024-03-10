@@ -1,4 +1,5 @@
 /** @format */
+"use client"
 
 import { AnimatePresence, motion } from "framer-motion";
 import { FiAlertCircle } from "react-icons/fi";
