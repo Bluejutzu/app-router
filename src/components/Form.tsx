@@ -1,9 +1,11 @@
 /** @format */
 
 "use client";
+require("dotenv").config();
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
+import axios from "axios";
 import { Button } from "@/components/ui/button";
 import {
   Form,
@@ -42,26 +44,20 @@ export function InputForm() {
         ),
       });
 
-      const suggestion = await JSON.stringify(data);
-      const reqBody = {
-        content: suggestion, // Assuming suggestion is the variable you want to include as content
-      };
-      const req = await fetch(
-        `https://discord.com/api/v10/channels/1168943371981697024/messages`,
-        {
-          method: "POST",
-
-          headers: {
-            Authorization: `Bot ${process.env.TOKEN}`,
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(reqBody),
-        }
-      );
-      console.log(req);
-    } catch (error) {
-      throw new Error(`${error}`);
-    }
+      const suggestion = JSON.stringify(data);
+      const req = await axios.request({
+        method: "get",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        url: `https://discord.com/api/v10/webhooks/1216394063721529434`,
+        data: {
+          content: suggestion,
+        },
+      });
+      const res = JSON.stringify(req)
+      console.log(res);
+    } catch (error) {}
     console.log(
       `You submitted the following values: \n ${JSON.stringify(data)}`
     );
