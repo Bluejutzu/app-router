@@ -34,12 +34,6 @@ export function InputForm() {
     },
   });
 
-  const token = process.env.TOKEN;
-  const headers = {
-    Authorization: `Bot ${token}`,
-    "Content-Type": "application/json",
-  };
-
   async function onSubmit(data: z.infer<typeof FormSchema>) {
     try {
       toast({
@@ -50,22 +44,33 @@ export function InputForm() {
           </pre>
         ),
       });
-      console.log(token, process.env.token);
-
       const suggestion = JSON.stringify(data);
+
+      const params = {
+        content: `API test via https://bluejutzu.vercel.app/experiences \n Suggestion JSON: ${suggestion}`,
+        username: "Send by API"
+      };
+
+      const token =
+        "6yHjJbFteB7AlzjrSyYtZGusNv8ykqo7Cx0oELkpJPGZW7lvyN3pr46tqYYxj-Z2wNaa";
+      const headers = {
+        "Content-Type": "application/json",
+      };
+
       const req = await axios
-        .get("https://discord.com/api/v10/webhooks/1216394063721529434", {
-          headers,
-        })
+        .post(
+          `https://discord.com/api/v10/webhooks/1216394063721529434/${token}`,
+          params,
+          {
+            headers,
+          }
+        )
         .then((response: AxiosResponse<Response>) => {
           console.log(response.data);
         })
         .catch((error: any) => {
           console.error("An error occured:", error);
         });
-
-      const res = JSON.stringify(req);
-      console.log(res);
     } catch (error) {}
     console.log(
       `You submitted the following values: \n ${JSON.stringify(data)}`
