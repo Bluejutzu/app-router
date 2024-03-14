@@ -1,11 +1,12 @@
 /** @format */
 
 "use client";
-require("dotenv").config();
+import dotenv from "dotenv";
+dotenv.config();
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
-import axios from "axios";
+import axios, { AxiosResponse } from "axios";
 import { Button } from "@/components/ui/button";
 import {
   Form,
@@ -33,6 +34,12 @@ export function InputForm() {
     },
   });
 
+  const token = process.env.TOKEN;
+  const headers = {
+    Authorization: `Bot ${token}`,
+    "Content-Type": "application/json",
+  };
+
   async function onSubmit(data: z.infer<typeof FormSchema>) {
     try {
       toast({
@@ -43,20 +50,22 @@ export function InputForm() {
           </pre>
         ),
       });
+      console.log(token, process.env.token);
 
       const suggestion = JSON.stringify(data);
-      const req = await axios.request({
-        method: "get",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        url: "https://discord.com/api/v10/webhooks/1216394063721529434",
-        data: {
-          content: suggestion,
-        },
-      });
-      const res = JSON.stringify(req)
-      console.log(res); 
+      const req = await axios
+        .get("https://discord.com/api/v10/webhooks/1216394063721529434", {
+          headers,
+        })
+        .then((response: AxiosResponse<Response>) => {
+          console.log(response.data);
+        })
+        .catch((error: any) => {
+          console.error("An error occured:", error);
+        });
+
+      const res = JSON.stringify(req);
+      console.log(res);
     } catch (error) {}
     console.log(
       `You submitted the following values: \n ${JSON.stringify(data)}`
