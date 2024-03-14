@@ -47,7 +47,7 @@ export function InputForm() {
       const suggestion = JSON.stringify(data);
 
       const params = {
-        content: `API test via https://bluejutzu.vercel.app/experiences \n Suggestion JSON: ${suggestion}`,
+        content: `API test via https://bluejutzu.vercel.app/ \n Suggestion JSON: ${suggestion}`,
         username: "Send by API"
       };
 
