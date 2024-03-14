@@ -19,10 +19,7 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { toast } from "@/components/ui/use-toast";
- import {
-  EmbedBuilder,
-  
-} from "discord.js"; 
+import { suggestionEmbed } from "./utils/suggestionEmbed";
 
 const FormSchema = z.object({
   suggestion: z.string().min(10, {
@@ -53,17 +50,6 @@ export function InputForm() {
        const token =
          "6yHjJbFteB7AlzjrSyYtZGusNv8ykqo7Cx0oELkpJPGZW7lvyN3pr46tqYYxj-Z2wNaa";
        const url = `https://discord.com/api/v10/webhooks/1216394063721529434/${token}`;
-       
-
-       const suggestionEmbed = new EmbedBuilder()
-         .setAuthor({ name: "Suggestion System" })
-         .setTitle(`New Suggestion submitted`)
-         .setDescription(`From`)
-         .setFields({
-           name: "Suggestion:",
-           value: "Mock text",
-         })
-         .setTimestamp();
 
        const params = {
          embeds: [suggestionEmbed],
