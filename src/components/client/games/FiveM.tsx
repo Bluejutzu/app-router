@@ -7,14 +7,8 @@ import Image from "next/image";
   RegisterLink,
   LoginLink,
 } from "@kinde-oss/kinde-auth-nextjs/components"; */
-import { FiveMtext } from "../../public/images/index.ts";
-import ModalWrapper from "./SpringModal.tsx";
-
-const navigation = [
-  { name: "What we offer", href: "/experiences" },
-  { name: "Communications", href: "/socials/communications" },
-  { name: "About Us", href: "#" },
-];
+import { FiveMtext } from "../../../../public/images/index.ts";
+import ModalWrapper from "./PleaseRead.tsx";
 
 export default function FiveM() {
   return (

@@ -16,8 +16,7 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-import ModalWrapper from "./Attention";
-const websiteUrl = "https://bluejutzu.vercel.app/";
+import ModalWrapper from "./games/Attention";
 
 const FormSchema = z.object({
   username: z.string().min(1, {

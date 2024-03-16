@@ -10,7 +10,7 @@ import Image from "next/image";
   RegisterLink,
   LoginLink,
 } from "@kinde-oss/kinde-auth-nextjs/components"; */
-import { ERLCTEXT, FiveMtext } from "../../public/images/index.ts";
+import { ERLCTEXT, FiveMtext } from "../../../../public/images/index.ts";
 
 const navigation = [
   { name: "What we offer", href: "/experiences" },

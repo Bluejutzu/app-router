@@ -1,14 +1,16 @@
 /** @format */
 
-import Experiences from "./Experiences";
-import FiveM from "./FiveM";
-import Hero from "./Hero";
-import Navbar from "./Navbar";
-import SlideInNotificationsE from "./NotifsERLC";
-import SlideInNotificationsF from "./NotifsFiveM";
-import ModalWrapper from "./SpringModal";
+import Experiences from "./client/games/Experiences";
+import FiveM from "./client/games/FiveM";
+import Hero from "./client/Hero";
+import Navbar from "./client/Navbar";
+import SlideInNotificationsE from "./client/games/NotifsERLC";
+import SlideInNotificationsF from "./client/games/NotifsFiveM";
+import ModalWrapper from "./client/games/PleaseRead";
+import NavbarForm from "./NavbarForm";
 
 export {
+  NavbarForm,
   Experiences,
   FiveM,
   Hero,

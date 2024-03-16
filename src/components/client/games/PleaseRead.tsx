@@ -11,8 +11,8 @@ export default function ModalWrapper() {
     <div className='m-1 grid place-content-center'>
       <button
         onClick={() => setIsOpen(true)}
-        className='bg-gradient-to-r from-violet-600/70 to-indigo-600/50 text-white text-2xl px-4 py-2 rounded-lg font-semibold hover:opacity-90 transition-opacity'>
-        Please read
+        className='bg-gradient-to-r from-violet-600/70 to-indigo-600/50 text-white text-xl px-4 py-2 rounded-lg font-semibold hover:opacity-90 transition-opacity'>
+       Please read
       </button>
       <SpringModal isOpen={isOpen} setIsOpen={setIsOpen} />
     </div>

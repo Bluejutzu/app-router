@@ -1,7 +1,7 @@
 /** @format */
 
-import Experiences from "@/components/Experiences";
-import Navbar from "@/components/Navbar";
+import Experiences from "@/components/client/games/Experiences";
+import Navbar from "@/components/client/Navbar";
 import React from "react";
 
 export default function page() {

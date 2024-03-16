@@ -10,7 +10,7 @@ const error = ({ error, reset }: { error: Error; reset: () => void }) => {
         <p className='text-base font-semibold text-emerald-700 dark:text-emerald-500'>
           There was a problem
         </p>
-        <h1 className='mt-4 text-3xl font-bold tracking-tight text-zinc-900 dark:text-zinc-50 '>
+        <h1 className='mt-4 text-3xl font-bold tracking-tight text-zinc-50 '>
           {error.message || "Something went wrong"}
           <p className='mt-6 text-base leading-7 text-zinc-600 dark:text-zinc-400'>
             Please try again later or contact support if the problem persists
