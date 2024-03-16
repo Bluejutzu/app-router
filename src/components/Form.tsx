@@ -21,7 +21,7 @@ const websiteUrl = "https://bluejutzu.vercel.app/";
 
 const FormSchema = z.object({
   username: z.string().min(1, {
-    message: "Username must be at least 1 character.",
+    message: "Required",
   }),
   suggestion: z.string().min(5, {
     message: "Suggestion must be at least 5 characters.",
