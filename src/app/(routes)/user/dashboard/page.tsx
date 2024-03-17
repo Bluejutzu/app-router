@@ -3,6 +3,8 @@
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
 import { db } from "@/models/Users";
 import Image from "next/image";
+import { NavbarLO } from "@/components";
+import { redirect } from "next/navigation";
 
 export default async function ClientDashboard() {
   const User = db.User;
@@ -28,14 +30,30 @@ export default async function ClientDashboard() {
     console.log("user saved");
   }
 
+  let data: JSX.Element;
+
   if (!(await User.findOne({ username: userData.username }))) {
     create();
   }
 
-  return (
-    <div className='flex flex-nowrap justify-center content-end text-white'>
-      User Profile:{" "}
-      <Image src={`${userPfp}`} alt={`${givenUser}`} width={24} height={24} />
-    </div>
-  );
+  if (!userPfp) {
+    redirect("/redirect/user");
+  } else {
+    data = (
+      <div>
+        <NavbarLO />
+        <div className='flex flex-nowrap justify-center content-end text-white'>
+          User Profile:{" "}
+          <Image
+            src={`${userPfp}`}
+            alt={`${givenUser}`}
+            width={24}
+            height={24}
+          />
+        </div>
+      </div>
+    );
+  }
+
+  return <div>text {data}</div>;
 }
