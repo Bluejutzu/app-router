@@ -52,7 +52,9 @@ export default function NavbarLO() {
           </div>
           <div className='hidden lg:flex lg:flex-1 lg:justify-end'>
             <LogoutLink
-              postLogoutRedirectURL='http://localhost:3000/'
+              postLogoutRedirectURL={
+                "http://localhost:3000/" || "https://bluejutzu.vercel.com"
+              }
               className='p-2 rounded-md font-semibold'>
               Log out
             </LogoutLink>

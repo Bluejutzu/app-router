@@ -2,7 +2,7 @@
 
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
 import { db } from "@/models/Users";
-import Development from "@/components/client/error/Development";
+import Image from "next/image";
 
 export default async function ClientDashboard() {
   const User = db.User;
@@ -33,8 +33,9 @@ export default async function ClientDashboard() {
   }
 
   return (
-    <div>
-      <Development />
+    <div className='flex flex-nowrap justify-center content-end text-white'>
+      User Profile:{" "}
+      <Image src={`${userPfp}`} alt={`${givenUser}`} width={24} height={24} />
     </div>
   );
 }

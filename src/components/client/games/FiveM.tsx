@@ -8,7 +8,7 @@ import Image from "next/image";
   LoginLink,
 } from "@kinde-oss/kinde-auth-nextjs/components"; */
 import { FiveMtext } from "../../../../public/images/index.ts";
-import ModalWrapper from "./PleaseRead.tsx";
+import { PleaseRead } from "@/components";
 
 export default function FiveM() {
   return (
@@ -41,7 +41,7 @@ export default function FiveM() {
             </p>
 
             <div className='flex items-center justify-center gap-x-6'>
-              <ModalWrapper />
+              <PleaseRead />
             </div>
           </div>
         </div>
