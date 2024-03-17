@@ -1,12 +1,12 @@
 /** @format */
 
-import Navbar from "@/components/client/Navbar";
+import Development from "@/components/client/error/Development";
 import React from "react";
 
 const page = () => {
   return (
     <div>
-      <Navbar />
+      <Development />
     </div>
   );
 };

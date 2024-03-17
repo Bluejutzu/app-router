@@ -1,13 +1,12 @@
 /** @format */
 
 import React from "react";
-import { Navbar } from "@/components";
+import Development from "@/components/client/error/Development";
 
 const page = () => {
   return (
     <div>
-      Erlc
-      <Navbar />
+      <Development/>
     </div>
   );
 };

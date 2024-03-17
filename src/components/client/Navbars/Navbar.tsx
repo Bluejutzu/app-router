@@ -4,14 +4,12 @@
 import { useState } from "react";
 import { Dialog } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-import { tailwindsvg } from "../../public/images";
+import { tailwindsvg } from "../../../../public/images";
 import Image from "next/image";
-import { InputForm } from "./client/Form";
-/* import {
-  LogoutLink,
+import {
   RegisterLink,
   LoginLink,
-} from "@kinde-oss/kinde-auth-nextjs/components"; */
+} from "@kinde-oss/kinde-auth-nextjs/components";
 
 const navigation = [
   { name: "What we offer", href: "/experiences" },
@@ -20,7 +18,7 @@ const navigation = [
   { name: "Suggestions!", href: "/api/support/submit-a-suggestion" },
 ];
 
-export default function NavbarForm() {
+export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
@@ -54,8 +52,13 @@ export default function NavbarForm() {
               </a>
             ))}
           </div>
-          <div className='hidden lg:flex lg:flex-1 lg:justify-end text-gray-600'>
-            Account creation/login disabled
+          <div className='hidden lg:flex lg:flex-1 lg:justify-end'>
+            <RegisterLink className='text-black bg-gray-100 rounded-lg font-semibold p-2 hover:bg-opacity-40 duration-200'>
+              Sign up
+            </RegisterLink>
+            <LoginLink className=' bg-gray-800 rounded-lg font-semibold p-2 hover:bg-opacity-50 duration-200 '>
+              Sign in
+            </LoginLink>
           </div>
         </nav>
         <Dialog
@@ -111,9 +114,7 @@ export default function NavbarForm() {
             }}
           />
         </div>
-        <div className='m-10'>
-          <InputForm />
-        </div>
+
         <div
           className='absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]'
           aria-hidden='true'>

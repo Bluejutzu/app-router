@@ -1,12 +1,12 @@
 /** @format */
 
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
-import NavbarLO from "@/components/client/auth/NavbarLO";
-import { User } from "@/models/Users";
+import { db } from "@/models/Users";
+import Development from "@/components/client/error/Development";
 
-export default async function Dashboard() {
-  const { isAuthenticated, getIdToken, getUser, getPermissions } =
-    getKindeServerSession();
+export default async function ClientDashboard() {
+  const User = db.User;
+  const { isAuthenticated, getUser } = getKindeServerSession();
 
   const idToken = (await getUser())?.id;
   const email = (await getUser())?.email;
@@ -22,14 +22,19 @@ export default async function Dashboard() {
     isAuthed: isAuthed,
   };
 
-  console.log(userData);
+  async function create() {
+    const user = new User(userData);
+    await user.save();
+    console.log("user saved");
+  }
 
-  const newUser = new User(userData);
-  await newUser.save();
+  if (!(await User.findOne({ username: userData.username }))) {
+    create();
+  }
 
   return (
     <div>
-      <NavbarLO />
+      <Development />
     </div>
   );
 }

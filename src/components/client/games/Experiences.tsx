@@ -1,9 +1,6 @@
 /** @format */
 "use client";
 
-import { useState } from "react";
-import { Dialog } from "@headlessui/react";
-import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
 /* import {
   LogoutLink,
@@ -12,15 +9,7 @@ import Image from "next/image";
 } from "@kinde-oss/kinde-auth-nextjs/components"; */
 import { ERLCTEXT, FiveMtext } from "../../../../public/images/index.ts";
 
-const navigation = [
-  { name: "What we offer", href: "/experiences" },
-  { name: "Communications", href: "/socials/communications" },
-  { name: "About Us", href: "#" },
-];
-
 export default function Experiences() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
   return (
     <div className='bg-gray-900 text-white cursor-default'>
       <div className='isolate px-6 pt-14 lg:px-8'>

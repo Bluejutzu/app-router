@@ -2,22 +2,27 @@
 
 import mongoose, { Schema, Document } from "mongoose";
 
-// Define interface for your document
-interface IUser extends Document {
-  email: string;
-  username?: string;
-  profile?: string;
-  isAuthed?: boolean;
+mongoose.connect(process.env.MONGODB_URI!);
+mongoose.Promise = global.Promise;
+
+export const db = {
+  User: userModel(),
+};
+
+
+function userModel() {
+  const schema = new Schema(
+    {
+      email: { type: String, required: true },
+      username: { type: String },
+      profile: { type: String },
+      isAuthed: { type: Boolean },
+    },
+    {
+      // add createdAt and updatedAt timestamps
+      timestamps: true,
+    }
+  );
+
+  return mongoose.models.User || mongoose.model("User", schema);
 }
-
-// Define the schema
-const UserSchema: Schema = new Schema({
-  email: { type: String, required: true },
-  username: { type: String },
-  profile: { type: String },
-  isAuthed: { type: Boolean },
-});
-
-// Create and export the model
-export const User =
-  mongoose.models.User 
