@@ -30,28 +30,40 @@ export default async function ClientDashboard() {
     console.log("user saved");
   }
 
-  let data: JSX.Element;
+  let data: React.JSX.Element;
 
   if (!(await User.findOne({ username: userData.username }))) {
     create();
   }
 
-  if (!userPfp) {
+  if (await User.findOne({ id: userData.id })) {
     redirect("/redirect/user");
   } else {
     data = (
-      <div>
+      <div className='flex flex-col h-screen'>
         <NavbarLO />
-        <div className='flex flex-nowrap justify-center content-end text-white'>
-          User Profile:{" "}
-          <a href='/'>
-            <Image
-              src={`${userPfp}`}
-              alt={`${givenUser}`}
-              width={300}
-              height={300}
-            />
-          </a>
+
+        <div className='flex-grow flex items-end justify-end pr-6 pb-6 relative'>
+          <Image
+            src={`${userPfp}`}
+            alt={`${givenUser}`}
+            width={80}
+            height={80}
+            className='rounded-full'
+          />
+
+          <span className='my-3 mx-5 font-bold text-xl text-white'>
+            {userData.username || userData.email}
+            <div className='text-sm text-gray-500'>
+              <p>ID: {userData.id}</p>
+              <p className='text-gray-500/50'>
+                This isn't your ID actually cause i fucked up the data retrieval
+              </p>
+              <div className=' text-base'>
+                im too lazy to make the rest of the dashboard so adios
+              </div>
+            </div>
+          </span>
         </div>
       </div>
     );

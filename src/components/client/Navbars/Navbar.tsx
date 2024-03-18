@@ -14,7 +14,7 @@ import {
 const navigation = [
   { name: "What we offer", href: "/experiences" },
   { name: "Communications", href: "/socials/communications" },
-  { name: "About Us", href: "#" },
+  { name: "About Us", href: "/socials/about-us" },
   { name: "Suggestions!", href: "/api/support/submit-a-suggestion" },
 ];
 
@@ -53,9 +53,10 @@ export default function Navbar() {
             ))}
           </div>
           <div className='hidden lg:flex lg:flex-1 lg:justify-end'>
-            <RegisterLink className='text-black bg-gray-100 rounded-lg font-semibold p-2 hover:bg-opacity-40 duration-200'>
+            <RegisterLink className='text-black bg-gray-100 rounded-lg font-semibold p-2  hover:bg-opacity-40 duration-200'>
               Sign up
             </RegisterLink>
+
             <LoginLink className=' bg-gray-800 rounded-lg font-semibold p-2 hover:bg-opacity-50 duration-200 '>
               Sign in
             </LoginLink>

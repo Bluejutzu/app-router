@@ -74,3 +74,6 @@
     @apply bg-background text-foreground;
   }
 }
+.hover-trigger:hover + .hover-text {
+  opacity: 1;
+}
