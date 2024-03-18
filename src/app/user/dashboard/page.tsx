@@ -44,16 +44,18 @@ export default async function ClientDashboard() {
         <NavbarLO />
         <div className='flex flex-nowrap justify-center content-end text-white'>
           User Profile:{" "}
-          <Image
-            src={`${userPfp}`}
-            alt={`${givenUser}`}
-            width={24}
-            height={24}
-          />
+          <a href='/'>
+            <Image
+              src={`${userPfp}`}
+              alt={`${givenUser}`}
+              width={300}
+              height={300}
+            />
+          </a>
         </div>
       </div>
     );
   }
 
-  return <div>text {data}</div>;
+  return <div>{data}</div>;
 }
