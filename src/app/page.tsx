@@ -3,15 +3,11 @@
 import { Hero, Navbar } from "@/components";
 import React from "react";
 
-// const wait = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
-
-const loading = async () => {
+export default function page() {
   return (
     <main>
       <Navbar />
       <Hero />
     </main>
   );
-};
-
-export default loading;
+}
