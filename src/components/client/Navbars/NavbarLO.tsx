@@ -80,7 +80,11 @@ export default function NavbarLO() {
             </div>
             <div className='mt-6 flow-root'>
               <div className='-my-6 divide-y divide-gray-500/10'>
-                <div className='space-y-2 py-6 text-white'>
+                <div className='space-y-2 py-6 text-white font-bold'>
+                  <div className='text-gray-100/70 text-lg'>
+                    Navigation
+                    <br />
+                  </div>
                   {navigation.map((item) => (
                     <a
                       key={item.name}
@@ -90,8 +94,14 @@ export default function NavbarLO() {
                     </a>
                   ))}
                 </div>
-                <div className='py-6 text-gray-100/20'>
-                  Account creation/login disabled
+                <div className='py-5 text-gray-100/70'>
+                  Account management
+                  <br />
+                  <LogoutLink
+                    postLogoutRedirectURL='/'
+                    className='p-3 rounded-lg font-semibold-mx-3 block px-3 my-3 py-2.5 text-base font-semibold leading-7 text-white hover:bg-gray-50 hover:text-black duration-300'>
+                    Log out
+                  </LogoutLink>
                 </div>
               </div>
             </div>
@@ -111,7 +121,6 @@ export default function NavbarLO() {
             }}
           />
         </div>
-
       </div>
     </div>
   );

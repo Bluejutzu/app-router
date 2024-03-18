@@ -72,7 +72,7 @@ export function InputForm() {
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className='mx-auto  space-y-4 text-white max-w-lg bg-gradient-to-r from-[#252a3f] to-[#423555] p-7 rounded-2xl drop-shadow-2xl '>
+        className='mx-auto space-y-4 text-white max-w-lg bg-gradient-to-r from-[#252a3f] to-[#423555] p-7 rounded-2xl drop-shadow-2xl '>
         <FormField
           control={form.control}
           name='username'

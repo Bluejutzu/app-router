@@ -54,15 +54,15 @@ export default async function ClientDashboard() {
 
           <span className='my-3 mx-5 font-bold text-xl text-white'>
             {userData.username || userData.email}
-            <div className='text-sm text-gray-500'>
-              <p>ID: {userData.id}</p>
+            {/*} <div className='text-sm text-gray-500'>
+              /<p>ID: {userData.id}</p>
               <p className='text-gray-500/50'>
                 This is not your ID actually cause i fucked up the data
                 retrieval
               </p>
-              <div className=' text-base'>
-                im too lazy to make the rest of the dashboard so adios
-              </div>
+                  </div> */}
+            <div className=' text-base text-gray-500'>
+              im too lazy to make the rest of the dashboard rn so adios
             </div>
           </span>
         </div>

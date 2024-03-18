@@ -85,17 +85,28 @@ export default function Navbar() {
             <div className='mt-6 flow-root'>
               <div className='-my-6 divide-y divide-gray-500/10'>
                 <div className='space-y-2 py-6 text-white'>
+                  <div className='text-gray-100/70'>
+                    Navigation
+                    <br />
+                  </div>
                   {navigation.map((item) => (
                     <a
                       key={item.name}
                       href={item.href}
-                      className='-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-200 hover:bg-slate-700 duration-150'>
+                      className='-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-200 hover:bg-slate-500 duration-150'>
                       {item.name}
                     </a>
                   ))}
                 </div>
-                <div className='py-6 text-gray-100/20'>
-                  Account creation/login disabled
+                <div className='py-5 text-gray-100/70'>
+                  Account management
+                  <br />
+                  <LoginLink className='-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-white hover:bg-gray-50 hover:text-black duration-300'>
+                    Log In
+                  </LoginLink>
+                  <RegisterLink className='-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 bg-indigo-600 text-white hover:bg-indigo-500 duration-300'>
+                    Sign Up
+                  </RegisterLink>
                 </div>
               </div>
             </div>

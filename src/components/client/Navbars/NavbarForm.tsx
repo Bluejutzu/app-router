@@ -55,7 +55,7 @@ export default function NavbarForm() {
             ))}
           </div>
           <div className='hidden lg:flex lg:flex-1 lg:justify-end text-gray-600'>
-            Account creation/login disabled
+            Account management available on homepage
           </div>
         </nav>
         <Dialog
@@ -90,7 +90,9 @@ export default function NavbarForm() {
                     </a>
                   ))}
                 </div>
-                <div className='py-6 text-gray-100/20'></div>
+                <div className='py-6 text-gray-100/60'>
+                  Account management available on homepage
+                </div>
               </div>
             </div>
           </Dialog.Panel>
