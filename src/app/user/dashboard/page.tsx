@@ -57,7 +57,8 @@ export default async function ClientDashboard() {
             <div className='text-sm text-gray-500'>
               <p>ID: {userData.id}</p>
               <p className='text-gray-500/50'>
-                This isn't your ID actually cause i fucked up the data retrieval
+                This is not your ID actually cause i fucked up the data
+                retrieval
               </p>
               <div className=' text-base'>
                 im too lazy to make the rest of the dashboard so adios
