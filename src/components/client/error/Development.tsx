@@ -4,10 +4,10 @@ import React from "react";
 import axios from "axios";
 
 export default async function Development() {
-  const req = axios.get(
+  const req = await axios.get(
     "https://v2.jokeapi.dev/joke/Any?blacklistFlags=political,explicit&type=single"
   );
-  const joke = (await req).data.joke;
+  const joke = req.data.joke;
 
   return (
     <main className='grid min-h-full place-items-center px-6 py-24 sm:py-32 lg:px-8'>

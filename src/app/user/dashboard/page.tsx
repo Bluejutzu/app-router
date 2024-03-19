@@ -55,12 +55,12 @@ export default async function ClientDashboard() {
             className='rounded-full'
           />
 
-          <span className='my-3 mx-5 font-bold text-xl text-white'>
+          <span className='my-3 mx-5 font-bold text-xl sm:text-lg text-white'>
             {userData.username || userData.email}
             <div className='text-sm text-gray-500'>
               <p>ID: {userData.id} </p>
             </div>
-            <div className=' text-base text-gray-500'>
+            <div className=' text-base sm:text-sm text-gray-500'>
               im too lazy to make the rest of the dashboard rn so adios
             </div>
           </span>

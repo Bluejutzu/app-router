@@ -38,7 +38,7 @@ export default function NavbarForm() {
           <div className='flex lg:hidden'>
             <button
               type='button'
-              className='-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-white'
+              className='text-sm font-semibold leading-6 text-white bg-gradient-to-r hover:from-[#252a3f] hover:to-[#423555] duration-300 rounded-lg shadow-lg  p-2 m-0'
               onClick={() => setMobileMenuOpen(true)}>
               <span className='sr-only'>Open main menu</span>
               <Bars3Icon className='h-6 w-6' aria-hidden='true' />
@@ -64,7 +64,7 @@ export default function NavbarForm() {
           open={mobileMenuOpen}
           onClose={setMobileMenuOpen}>
           <div className='fixed inset-0 z-50' />
-          <Dialog.Panel className='fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-gradient-to-r from-[#222738] to-[#5b4777] px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10'>
+          <Dialog.Panel className='fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-gradient-to-l from-[#222738] to-[#5b4777] px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10'>
             <div className='flex items-center justify-between'>
               <a href='/' className='-m-1.5 p-1.5'>
                 <span className='sr-only'>Your Company</span>
@@ -85,7 +85,7 @@ export default function NavbarForm() {
                     <a
                       key={item.name}
                       href={item.href}
-                      className='-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-200 hover:bg-slate-700 duration-150'>
+                      className='-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-200 bg-gradient-to-l hover:from-[#252a3f] hover:to-[#423555] shadow-lg duration-150'>
                       {item.name}
                     </a>
                   ))}
