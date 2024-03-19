@@ -13,6 +13,12 @@ const nextConfig = {
         port: "",
         pathname: "/a/*",
       },
+      {
+        protocol: "https",
+        hostname: "github.githubassets.com",
+        port: "",
+        pathname: "/assets/*",
+      },
     ],
   },
 };
