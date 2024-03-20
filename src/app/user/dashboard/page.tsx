@@ -43,27 +43,33 @@ export default async function ClientDashboard() {
     redirect("/redirect/user");
   } else {
     data = (
-      <div className='flex flex-col h-screen'>
+      <div className='flex flex-col h-screen cursor-default'>
         <NavbarLO />
-
-        <div className='flex-grow flex items-end justify-end pr-6 pb-6 relative'>
-          <Image
-            src={`${userPfp}`}
-            alt={`${givenUser}`}
-            width={80}
-            height={80}
-            className='rounded-full'
-          />
-
-          <span className='my-3 mx-5 font-bold text-xl sm:text-lg text-white'>
-            {userData.username || userData.email}
-            <div className='text-sm text-gray-500'>
-              <p>ID: {userData.id} </p>
-            </div>
-            <div className=' text-base sm:text-sm text-gray-500'>
-              im too lazy to make the rest of the dashboard rn so adios
-            </div>
-          </span>
+        <div className='flex-grow flex mt-12 justify-start'>
+          {/* Flex text in the middle */}
+          <div className='bg-gray-200/60 blur-md p-4 rounded-lg select-none'>
+            <h1 className='text-4xl font-bold text-center'></h1>
+            <p className='text-lg text-gray-700 text-center'>
+              This is flex text in the middle of the screen.
+            </p>
+          </div>
+        </div>
+        <div className='flex items-end justify-end pr-5 pb-4 relative'>
+          <div className='flex justify-end bg-gradient-to-r from-[#252a3f] to-[#423555] rounded-xl p-1 shadow-2xl'>
+            <Image
+              src={`${userPfp}`}
+              alt={`undefined`}
+              width={90}
+              height={90}
+              className='rounded-full'
+            />
+            <span className=' my-3 mx-5 font-bold text-xl sm:text-lg text-white '>
+              {userData.username || userData.email}
+              <div className='text-sm text-gray-500 hover:cursor-text'>
+                <p>ID: {userData.id} </p>
+              </div>
+            </span>
+          </div>
         </div>
       </div>
     );
