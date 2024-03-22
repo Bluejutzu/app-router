@@ -9,8 +9,10 @@ import NavbarForm from "./client/Navbars/NavbarForm";
 import NavbarLO from "./client/Navbars/NavbarLO";
 import Attention from './client/games/Attention'
 import Redirect from "./client/error/Redirect";
+import UserInfoCard from "./client/UserInfoCard";
 
 export {
+  UserInfoCard,
   Redirect,
   Attention,
   NavbarLO,
