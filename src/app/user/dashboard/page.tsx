@@ -20,7 +20,6 @@ export default async function ClientDashboard() {
   const isAuthed = await isAuthenticated();
 
   if (!userData) {
-    // Handle case where user data is not available
     redirect("/redirect/user");
   }
 

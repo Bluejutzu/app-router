@@ -18,20 +18,19 @@ export default function UserInfoCard({ userData }: { userData: UserInfo }) {
 
   const handleUsernameChange = async () => {
     try {
-      const response = await fetch("/api/users/updateUsername", {
-        method: "POST",
+      const response = await fetch(`/api/users/updateUsername/${userData.id}`, {
+        // Updated endpoint URL
+        // Assuming you're using a PUT request for updating
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ id: userData.id, newUsername }),
+        body: JSON.stringify({ username: newUsername }), // Sending only the updated username
       });
 
       if (response.ok) {
         setSuccessMessage("Username updated successfully");
         // Update the username in the local state
         setNewUsername(newUsername);
-        // Update the userData directly
-        userData.username = newUsername;
         // Hide the editing field
         setEditingUsername(false);
       } else {
