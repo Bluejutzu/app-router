@@ -11,7 +11,7 @@ export default function page() {
           There was a problem
         </p>
         <h1 className='mt-4 text-4xl font-bold tracking-tight text-zinc-50 '>
-          "You are not logged in!"
+          You are not logged in!
           <p className='mt-6 text-base leading-7 text-zinc-600 dark:text-zinc-400'>
             Please login before accessing that page
           </p>
