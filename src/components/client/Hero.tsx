@@ -1,8 +1,5 @@
 /** @format */
 "use client";
-import Image from "next/image";
-import { githubpng } from "../../../public/images";
-
 export default function Hero() {
   return (
     <div className='bg-gray-900 text-white cursor-default'>

@@ -1,10 +1,7 @@
 /** @format */
 "use client";
 
-// UserInfoCard.tsx
-
 import { useState } from "react";
-import { redirect } from "next/navigation";
 
 interface UserInfo {
   id: string;
@@ -15,13 +12,13 @@ interface UserInfo {
 }
 
 export default function UserInfoCard({ userData }: { userData: UserInfo }) {
-  const router = redirect
   const [editingUsername, setEditingUsername] = useState(false);
   const [newUsername, setNewUsername] = useState(userData.username);
+  const [successMessage, setSuccessMessage] = useState("");
 
   const handleUsernameChange = async () => {
     try {
-      const response = await fetch("/api/users/", {
+      const response = await fetch("/api/users/updateUsername", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -30,8 +27,13 @@ export default function UserInfoCard({ userData }: { userData: UserInfo }) {
       });
 
       if (response.ok) {
-        // Redirect to dashboard or reload page
-        router("/user/dashboard")
+        setSuccessMessage("Username updated successfully");
+        // Update the username in the local state
+        setNewUsername(newUsername);
+        // Update the userData directly
+        userData.username = newUsername;
+        // Hide the editing field
+        setEditingUsername(false);
       } else {
         console.error("Failed to update username");
       }
@@ -43,17 +45,21 @@ export default function UserInfoCard({ userData }: { userData: UserInfo }) {
   return (
     <div className='bg-white rounded-lg shadow-md p-6'>
       <div className='text-center mt-4'>
+        {successMessage && <p className='text-green-500'>{successMessage}</p>}
         {editingUsername ? (
-          <input
-            type='text'
-            value={newUsername}
-            onChange={(e) => setNewUsername(e.target.value)}
-            onBlur={() => {
-              setEditingUsername(false);
-              handleUsernameChange();
-            }}
-            autoFocus
-          />
+          <>
+            <input
+              type='text'
+              value={newUsername}
+              onChange={(e) => setNewUsername(e.target.value)}
+              autoFocus
+            />
+            <button
+              className='ml-2 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600'
+              onClick={() => handleUsernameChange()}>
+              Confirm
+            </button>
+          </>
         ) : (
           <p
             className='text-lg font-semibold text-gray-800 cursor-pointer'
