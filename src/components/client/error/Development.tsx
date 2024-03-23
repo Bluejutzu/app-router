@@ -7,7 +7,7 @@ export default async function Development() {
   const req = await axios.get(
     "https://v2.jokeapi.dev/joke/Any?blacklistFlags=political,explicit&type=single"
   );
-  const joke = req.data.joke;
+  const joke = await req.data.joke;
 
   return (
     <main className='grid min-h-full place-items-center px-6 py-24 sm:py-32 lg:px-8'>
