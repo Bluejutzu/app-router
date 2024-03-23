@@ -53,7 +53,7 @@ export default async function ClientDashboard() {
   return (
     <div className='flex flex-col h-screen '>
       <NavbarLO />
-      <div className='flex-grow flex items-center lg:justify-start sm:justify-center'>
+      <div className='flex-grow flex items-center lg:justify-center sm:justify-center'>
         <UserInfoCard
           userData={{
             id: idToken,
