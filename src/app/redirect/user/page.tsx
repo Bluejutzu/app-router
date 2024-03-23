@@ -3,7 +3,7 @@
 import React from "react";
 import mongoose from "mongoose";
 
-export default function page(error: mongoose.Error) {
+export default function page() {
   return (
     <main className='grid min-h-full place-items-center px-6 py-24 sm:py-32 lg:px-8'>
       <div className='text-center'>
@@ -11,7 +11,7 @@ export default function page(error: mongoose.Error) {
           There was a problem
         </p>
         <h1 className='mt-4 text-4xl font-bold tracking-tight text-zinc-50 '>
-          {error.message || "You are not logged in!"}
+          "You are not logged in!"
           <p className='mt-6 text-base leading-7 text-zinc-600 dark:text-zinc-400'>
             Please login before accessing that page
           </p>
