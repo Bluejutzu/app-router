@@ -12,16 +12,15 @@ export default async function ClientDashboard() {
 
   const idToken = userData?.id || "";
   const email = userData?.email || "";
-  const givenUser = userData?.given_name || "";
+  let givenUser = userData?.given_name || "";
   const userPfp = userData?.picture || "";
   const isAuthed = await isAuthenticated();
 
-  if (!userData) {
-    redirect("/redirect/user");
-  }
+  const data = await User.collection.findOne({ email: email });
+  givenUser = data?.username || givenUser
 
   async function handleRedirect() {
-    if (await User.findOne({ id: idToken })) {
+    if (!userData) {
       redirect("/redirect/user");
     }
   }
@@ -30,7 +29,7 @@ export default async function ClientDashboard() {
 
   async function createUser() {
     const existingUsername = await User.findOne({ username: givenUser });
-    const existingEmail = await User.findOne({ email });
+    const existingEmail = await User.findOne({ email: email });
 
     if (!existingUsername || !existingEmail) {
       const user = new User({

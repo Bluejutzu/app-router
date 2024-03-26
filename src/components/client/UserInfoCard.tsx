@@ -1,5 +1,6 @@
 /** @format */
 "use client";
+
 import Image from "next/image";
 import React, { useState } from "react";
 import { delay } from "@/lib/utils";
@@ -8,10 +9,9 @@ interface UserInfo {
   id: string;
   email: string;
   username: string;
-  profile: Object;
+  profile: string;
   isAuthed: boolean;
 }
-
 
 export default function UserInfoCard({ userData }: { userData: UserInfo }) {
   const [editingUsername, setEditingUsername] = useState(false);
@@ -22,43 +22,50 @@ export default function UserInfoCard({ userData }: { userData: UserInfo }) {
     if (!newUsername) {
       setEditingUsername(true);
       setSuccessMessage("Username cannot be empty");
+    } else if (newUsername.length < 4 || newUsername.length > 15) {
+      setEditingUsername(false);
+      setSuccessMessage("Username must be 4-15 characters");
     } else {
       const data = {
         oldUser: userData.username,
         newUsername: newUsername,
         id: userData.id,
+        email: userData.email,
       };
       const api = `/api/users/updateUsername/`;
 
-      fetch(api, {
-        method: "POST",
-        body: JSON.stringify(data),
-      })
-        .then((response) => {
-          if (!response.ok) {
-            throw new Error("Network response was not ok");
-          }
-
-          return response.json();
-        })
-        .then((data) => {
-          console.log("Response:", data);
-        })
-        .catch((error) => {
-          console.error("Error:", error);
+      try {
+        const response = await fetch(api, {
+          method: "POST",
+          body: JSON.stringify(data),
         });
-      setEditingUsername(false);
-      setSuccessMessage("Username updated successfully");
-      await delay(3000);
-      setSuccessMessage("");
+
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        setEditingUsername(false);
+        setSuccessMessage("Username updated successfully");
+        await delay(3000);
+        setSuccessMessage("");
+      } catch (error) {
+        console.error("Error:", error);
+        setSuccessMessage("Error updating username");
+      }
     }
   }
 
   return (
-    <div className='bg-gradient-to-l hover:from-[#252a3f] hover:to-[#423555]  rounded-lg shadow-md p-6'>
-      <div className='text-cente  mt-4'>
+    <div className='bg-gradient-to-r hover:from-[#252a3f] hover:to-[#423555] duration-300 rounded-lg shadow-md p-6'>
+      <div className='text-center mt-4'>
         {successMessage && (
-          <p className=' text-green-500 -mt-3 pb-2'>{successMessage}</p>
+          <p
+            className={`pb-2 ${
+              successMessage.includes("successfully")
+                ? "text-green-500"
+                : "text-red-500"
+            }`}>
+            {successMessage}
+          </p>
         )}
         {editingUsername ? (
           <>
@@ -79,7 +86,7 @@ export default function UserInfoCard({ userData }: { userData: UserInfo }) {
           <div>
             <Image
               className='mx-auto mb-3 rounded-full'
-              src={`${userData.profile}`}
+              src={userData.profile}
               alt=''
               height={90}
               width={100}
