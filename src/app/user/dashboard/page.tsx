@@ -1,7 +1,4 @@
 /** @format */
-
-// ClientDashboard.tsx
-
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
 import { db } from "@/models/Users";
 import { NavbarLO, UserInfoCard } from "@/components";
@@ -53,7 +50,7 @@ export default async function ClientDashboard() {
   return (
     <div className='flex flex-col h-screen '>
       <NavbarLO />
-      <div className='flex-grow flex items-center lg:justify-center sm:justify-center'>
+      <div className='flex-grow flex items-center lg:justify-start lg:ml-10 sm:justify-center  '>
         <UserInfoCard
           userData={{
             id: idToken,
