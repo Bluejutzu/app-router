@@ -23,7 +23,7 @@ export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <div className='bg-gray-900 text-white '>
+    <div className='bg-gray-900 text-white z-0 '>
       <header className='absolute inset-x-0 top-0 z-50 text-white'>
         <nav
           className='flex items-center justify-between p-6 lg:px-8'

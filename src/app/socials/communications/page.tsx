@@ -3,11 +3,9 @@
 
 import React from "react";
 import { Navbar } from "@/components";
-import { usePathname } from "next/navigation";
 
 export default function page() {
-  const currentPath = usePathname();
-
+  const currentPath = window.location.href
   return (
     <div>
       <Navbar />
