@@ -1,14 +1,21 @@
 /** @format */
+"use client";
 
-import Development from "@/components/client/error/Development";
 import React from "react";
+import { Navbar } from "@/components";
+import { usePathname } from "next/navigation";
 
-const page = () => {
+export default function page() {
+  const currentPath = usePathname();
+
   return (
     <div>
-      <Development />
+      <Navbar />
+      <div className='text-white flex flex-col h-screen'>
+        <div className='flex-grow flex items-center lg:justify-center lg:ml-10 sm:justify-center select-auto'>
+          Current Path: {currentPath}
+        </div>
+      </div>
     </div>
   );
-};
-
-export default page;
+}

@@ -24,7 +24,7 @@ export default function NavbarForm() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <div className='bg-gray-900 text-white cursor-default'>
+    <div className='bg-gray-900 text-white '>
       <header className='absolute inset-x-0 top-0 z-50 text-white'>
         <nav
           className='flex items-center justify-between p-6 lg:px-8'

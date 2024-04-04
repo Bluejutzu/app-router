@@ -23,7 +23,7 @@ export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <div className='bg-gray-900 text-white cursor-default '>
+    <div className='bg-gray-900 text-white '>
       <header className='absolute inset-x-0 top-0 z-50 text-white'>
         <nav
           className='flex items-center justify-between p-6 lg:px-8'
@@ -53,12 +53,12 @@ export default function Navbar() {
               </a>
             ))}
           </div>
-          <div className='hidden lg:flex lg:flex-1 lg:justify-end'>
-            <RegisterLink className='text-black bg-gray-100 rounded-lg font-semibold p-2  hover:bg-opacity-40 duration-200'>
+          <div className='hidden lg:flex lg:flex-1 lg:justify-end text-sm'>
+            <RegisterLink className='text-black bg-gray-100 rounded-lg font-bold p-2  hover:bg-opacity-40 duration-200'>
               Sign up
             </RegisterLink>
 
-            <LoginLink className=' bg-gray-800 rounded-lg font-semibold p-2 hover:bg-opacity-50 duration-200 '>
+            <LoginLink className=' bg-gray-800 rounded-lg font-bold p-2 hover:bg-opacity-50 duration-200 '>
               Sign in
             </LoginLink>
           </div>

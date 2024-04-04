@@ -10,6 +10,12 @@ export default async function ClientDashboard() {
 
   const userData = await getUser();
 
+  async function handleRedirect() {
+    if (!userData) {
+      redirect("/redirect/user");
+    }
+  }
+
   const idToken = userData?.id || "";
   const email = userData?.email || "";
   let givenUser = userData?.given_name || "";
@@ -17,13 +23,7 @@ export default async function ClientDashboard() {
   const isAuthed = await isAuthenticated();
 
   const data = await User.collection.findOne({ email: email });
-  givenUser = data?.username || givenUser
-
-  async function handleRedirect() {
-    if (!userData) {
-      redirect("/redirect/user");
-    }
-  }
+  givenUser = data?.username || givenUser || "Failed to fetch user";
 
   handleRedirect();
 
@@ -47,7 +47,7 @@ export default async function ClientDashboard() {
   createUser();
 
   return (
-    <div className='flex flex-col h-screen '>
+    <div className='flex flex-col h-screen'>
       <NavbarLO />
       <div className='flex-grow flex items-center lg:justify-start lg:ml-10 sm:justify-center  '>
         <UserInfoCard

@@ -4,12 +4,12 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 
-
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Dashboard",
-  description: "Some",
+  description:
+    "Expermintel Webpage created via Reactjs, NextJs and deployed with vercel",
 };
 
 export default function RootLayout({
@@ -19,9 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={`${inter.className} bg-gray-900 `}>
-        {children}
-      </body>
+      <body className={`${inter.className} bg-gray-900 `}>{children}</body>
     </html>
   );
 }

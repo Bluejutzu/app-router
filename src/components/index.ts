@@ -10,8 +10,10 @@ import NavbarLO from "./client/Navbars/NavbarLO";
 import Attention from "./client/games/Attention";
 import Redirect from "./client/error/Redirect";
 import UserInfoCard from "./client/UserInfoCard";
+import Blob from "./client/Blob";
 
 export {
+  Blob,
   UserInfoCard,
   Redirect,
   Attention,
