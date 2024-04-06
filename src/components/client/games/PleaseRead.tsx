@@ -40,7 +40,7 @@ const SpringModal = ({
             animate={{ scale: 1, rotate: "0deg" }}
             exit={{ scale: 0, rotate: "0deg" }}
             onClick={(e) => e.stopPropagation()}
-            className='bg-gradient-to-br from-[#FF9139]/60 to-[#A40A0F]/60 text-white p-6 rounded-lg w-full max-w-lg shadow-xl cursor-default relative overflow-hidden'>
+            className='bg-gradient-to-br from-[#252a3f] to-[#423555] text-white p-6 rounded-lg w-full max-w-lg shadow-xl cursor-default relative overflow-hidden'>
             <FiAlertCircle className='text-white/10 rotate-12 text-[250px] absolute z-0 -top-24 -left-24' />
             <div className='relative z-10'>
               <div className='bg-white w-16 h-16 mb-2 rounded-full text-3xl text-indigo-600 grid place-items-center mx-auto'>

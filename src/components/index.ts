@@ -11,8 +11,10 @@ import Attention from "./client/games/Attention";
 import Redirect from "./client/error/Redirect";
 import UserInfoCard from "./client/UserInfoCard";
 import Blob from "./client/Blob";
+import ERLC from "./client/games/Erlc";
 
 export {
+  ERLC,
   Blob,
   UserInfoCard,
   Redirect,
