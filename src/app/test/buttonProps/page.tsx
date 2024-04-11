@@ -58,7 +58,7 @@ const Page = () => {
         </Button>
       </div>
       <a
-        href='https://github.com/Bluejutzu/app-router/tree/master/src/components'
+        href='https://github.com/Bluejutzu/app-router/blob/master/src/components/Button.tsx'
         className='absolute text-sm font-bold bottom-5 left-5 hover:underline transform transition duration-300 ease-in-out outline-none rounded-xl border-2 border-gray-300/60 py-2 px-4 bg-white/60 hover:bg-gray-100 hover:border-gray-400'>
         Source Code
       </a>
