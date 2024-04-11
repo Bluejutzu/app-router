@@ -30,13 +30,13 @@ const Page = () => {
           size='lg'
           variant='subtle'
           className='text-black hover:text-black mb-5 sm:mb-0'>
-          I'm subtle
+          Im subtle
         </Button>
         <Button
           size='lg'
           variant='ghost'
           className='text-white hover:text-black mb-5 sm:mb-0'>
-          I'm a ghost!
+          Im a ghost!
         </Button>
         <Button
           size='lg'
@@ -48,7 +48,7 @@ const Page = () => {
           size='lg'
           variant='destructive'
           className='text-white hover:text-white mb-5 sm:mb-0'>
-          I'm destructive!!!
+          Im destructive!!!
         </Button>
         <Button
           size='lg'
