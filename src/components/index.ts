@@ -12,8 +12,10 @@ import Redirect from "./client/error/Redirect";
 import UserInfoCard from "./client/UserInfoCard";
 import Blob from "./client/Blob";
 import ERLC from "./client/games/Erlc";
+import { Button } from "./Button";
 
 export {
+  Button,
   ERLC,
   Blob,
   UserInfoCard,

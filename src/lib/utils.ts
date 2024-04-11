@@ -2,6 +2,7 @@
 
 import { type ClassValue, clsx } from "clsx";
 import { twMerge } from "tailwind-merge";
+import { z } from "zod";
 
 function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
@@ -10,4 +11,9 @@ function delay(ms: number) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
+const envSchema = z.object({
+  WEBHOOK_TOKEN: z.string()
+});
+
+export const env = envSchema.parse(process.env);
 export { cn, delay };
