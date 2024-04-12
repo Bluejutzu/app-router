@@ -2,10 +2,9 @@
 
 // DeleteToken.ts
 import { NextApiRequest, NextApiResponse } from "next";
-import axios from "axios";
 import { NextResponse } from "next/server";
 
-export async function GET(req: NextApiRequest, res: NextApiResponse) {
+export async function GET(req: Request, res: Response) {
   /*const deleteToken = async (token: string) => {
     const result = await axios.delete(
       `https://api.vercel.com/v3/user/tokens/${token}`,
@@ -28,5 +27,7 @@ const result = await deleteToken(token);
   } catch (error) {
     console.error(error);
   }*/
-  return NextResponse.json("Unfinished api request, source: https://github.com/Bluejutzu/app-router/src/app/api/auth/delete-token")
+  return NextResponse.json(
+    "Unfinished api request, source: https://github.com/Bluejutzu/app-router/src/app/api/auth/delete-token"
+  );
 }

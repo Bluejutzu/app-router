@@ -2,7 +2,6 @@
 
 import { env } from "@/lib/utils";
 import { NextResponse } from "next/server";
-const jwt = require("jsonwebtoken");
 
 export async function GET(req: Request, res: Response) {
   /*try {
@@ -24,7 +23,7 @@ export async function GET(req: Request, res: Response) {
     console.error(error);
     return NextResponse.json({ error: error.message });
   }*/
-   return NextResponse.json(
-     "Unfinished api request, source: https://github.com/Bluejutzu/app-router/src/app/api/auth/generate-token"
-   );
+  return NextResponse.json(
+    "Unfinished api request, source: https://github.com/Bluejutzu/app-router/src/app/api/auth/generate-token"
+  );
 }
