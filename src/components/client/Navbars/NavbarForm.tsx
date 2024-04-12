@@ -7,11 +7,6 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { tailwindsvg } from "../../../../public/images";
 import Image from "next/image";
 import { InputForm } from "../Form";
-/* import {
-  LogoutLink,
-  RegisterLink,
-  LoginLink,
-} from "@kinde-oss/kinde-auth-nextjs/components"; */
 
 const navigation = [
   { name: "What we offer", href: "/experiences" },

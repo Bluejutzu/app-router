@@ -12,7 +12,8 @@ function delay(ms: number) {
 }
 
 const envSchema = z.object({
-  WEBHOOK_TOKEN: z.string().optional()
+  VERCEL_AUTH: z.string().optional(),
+  WEBHOOK_TOKEN: z.string().optional(),
 });
 
 export const env = envSchema.parse(process.env);

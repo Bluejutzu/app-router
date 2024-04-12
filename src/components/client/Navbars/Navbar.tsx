@@ -16,7 +16,7 @@ const navigation = [
   { name: "Communications", href: "/socials/communications" },
   { name: "About Us", href: "/socials/about-us" },
   { name: "Suggestions!", href: "/api/support/submit-a-suggestion" },
-  { name: "My Github :)", href: "https://github.com/Bluejutzu" },
+  { name: "Sources", href: "/source" },
 ];
 
 export default function Navbar() {

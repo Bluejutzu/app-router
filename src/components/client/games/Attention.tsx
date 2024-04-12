@@ -47,10 +47,7 @@ const SpringModal = ({
                 <FiAlertCircle />
               </div>
               <h3 className='text-3xl font-bold text-center mb-2'></h3>
-              <p className='text-center mb-6'>
-                Your given username and suggestion will be saved within a server for
-                further evalutation.
-              </p>
+              <p className='text-center mb-6'>Your data has been submitted.</p>
               <div className='flex gap-2'>
                 <button
                   onClick={() => setIsOpen(false)}
