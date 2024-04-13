@@ -12,7 +12,6 @@ function delay(ms: number) {
 }
 
 const envSchema = z.object({
-  VERCEL_AUTH: z.string().optional(),
   WEBHOOK_TOKEN: z.string().optional(),
 });
 

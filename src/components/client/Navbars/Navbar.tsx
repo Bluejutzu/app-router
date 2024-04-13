@@ -48,7 +48,7 @@ export default function Navbar() {
               <a
                 key={item.name}
                 href={item.href}
-                className='text-sm font-semibold leading-6 text-white bg-gradient-to-r hover:from-[#252a3f] hover:to-[#423555] duration-300 rounded-lg shadow-lg  p-2 m-0'>
+                className='text-sm font-semibold text-white bg-gradient-to-r hover:from-[#252a3f] hover:to-[#423555] duration-300 rounded-lg shadow-lg p-2 m-0'>
                 {item.name}
               </a>
             ))}
@@ -65,7 +65,7 @@ export default function Navbar() {
         </nav>
         <Dialog
           as='div'
-          className='lg:hidden'
+          className='sm:hidden'
           open={mobileMenuOpen}
           onClose={setMobileMenuOpen}>
           <div className='fixed inset-0 z-50' />
