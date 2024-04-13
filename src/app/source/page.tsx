@@ -8,7 +8,7 @@ import axios from "axios";
 const jwt = require("jsonwebtoken");
 
 const Page = () => {
-  /*  const [deployedVersion, setDeployedVersion] = useState<string | null>(null);
+   const [deployedVersion, setDeployedVersion] = useState<string | null>(null);
 
    useEffect(() => {
     // Define a function to fetch deployment status
@@ -50,7 +50,7 @@ const Page = () => {
     // Clear interval when component unmounts to avoid memory leaks
     return () => clearInterval(interval);
   }, []); // Empty dependency array ensures the effect runs only once on mount
-;;*/
+;;
 
   return (
     <div className='flex flex-col h-screen justify-center items-center content-center bg-gradient-to-r from-purple-700/60 via-purple-600 to-pink-500 relative'>
