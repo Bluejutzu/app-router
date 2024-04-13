@@ -6,6 +6,7 @@
     "react/display-name": [
       0,
       { "ignoreTranspilerName": true, "checkContextObjects": true }
-    ]
+    ],
+    "react/no-unescaped-entities": ["warn", { "forbid": [">", "}"] }]
   }
 }

@@ -90,7 +90,7 @@ export function NavigationMenuDemo() {
                 </NavigationMenuLink>
               </li>
               <ListItem href='/source/buttonProps' title='Buttons'>
-                "Do i click on that?"
+                
               </ListItem>
               <ListItem
                 href='/api/support/submit-a-suggestion'
