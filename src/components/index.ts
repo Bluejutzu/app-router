@@ -12,9 +12,13 @@ import Redirect from "./client/error/Redirect";
 import UserInfoCard from "./client/UserInfoCard";
 import Blob from "./client/Blob";
 import ERLC from "./client/games/Erlc";
-import { Button } from "./Button";
+import { Button } from "./client/Button";
+import MenuBox from "./ui/MenuBox";
+import ScreenBox from "./ui/ScreenBox";
 
 export {
+  ScreenBox,
+  MenuBox,
   Button,
   ERLC,
   Blob,
