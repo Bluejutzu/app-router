@@ -1,39 +1,27 @@
 /** @format */
-"use client";
-import React, { useEffect } from "react";
+"use client"
 
-const Blob: React.FC = () => {
-  useEffect(() => {
-    const blob = document.getElementById("blob");
+import React from "react";
+import { useMouse } from "@mantine/hooks";
 
-    const pointerMoveHandler = (event: PointerEvent) => {
-      const { clientX, clientY } = event;
-      if (blob) {
-        blob.animate([{ left: `${clientX}px`, top: `${clientY}px` }], {
-          duration: 3000,
-          fill: "forwards",
-        });
-      }
-    };
+interface BlobProps {
+  ClientX?: number;
+  ClientY?: number;
+  ref?: any;
+}
 
-    window.onpointermove = pointerMoveHandler;
-    document.querySelector("h1");
-
-    return () => {
-      window.onpointermove = null;
-      document.querySelector("h1");
-    };
-  }, []);
-
+const Blob: React.FC<BlobProps> = ({ ClientX, ClientY }) => {
+  const {x, y} = useMouse()
+  ClientX = x - 115;
+  ClientY = y - 120;
   return (
-    <div className='relative h-screen bg-black overflow-hidden'>
+    <div className='absolute top-0 left-0 blur-3xl '>
       <div
-        id='blob'
-        className='absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-aquamarine to-mediumpurple rounded-full opacity-80 animate-rotate'
-        style={{ width: "34vmax", height: "34vmax" }}></div>
-      <div
-        id='blur'
-        className='absolute w-full h-full z-2 backdrop-blur-12vmax'></div>
+        className=' z-0 absolute bg-gradient-to-r from-purple-700/60 via-purple-600 to-pink-500 w-[300px] h-[300px] rounded-full blur-3xl transition animate-spin-slow   '
+        style={{
+          left: `${ClientX}px`,
+          top: `${ClientY}px`,
+        }}></div>
     </div>
   );
 };

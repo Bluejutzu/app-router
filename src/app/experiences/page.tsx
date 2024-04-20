@@ -1,7 +1,7 @@
 /** @format */
 
-import Experiences from "@/components/client/games/Experiences";
-import Navbar from "@/components/client/Navbars/Navbar";
+import { Blob, Experiences, Navbar } from "@/components";
+
 import React from "react";
 
 export default function page() {
