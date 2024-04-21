@@ -62,3 +62,11 @@
 .hover-trigger:hover + .hover-text {
   opacity: 1;
 }
+
+.hover\:gradient-text:hover {
+  background-image: linear-gradient(to right, rgba(203, 64, 244, 0.6), rgba(180, 62, 232, 0.6), rgba(160, 58, 218, 0.6));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
