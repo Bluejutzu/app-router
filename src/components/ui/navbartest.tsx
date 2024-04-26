@@ -3,9 +3,9 @@
 "use client";
 
 import * as React from "react";
-import Link from "next/link";
 import { ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
+import axios from "axios";
 
 import {
   NavigationMenu,
@@ -14,10 +14,9 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
-  navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 
-const components: {
+/*const components: {
   title: string;
   href: string;
   description: string;
@@ -64,9 +63,10 @@ const components: {
     description:
       "A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.",
   },
-];
+];*/
 
 export function NavigationMenuDemo() {
+
   return (
     <NavigationMenu className='text-black left-50 '>
       <NavigationMenuList>
@@ -90,7 +90,7 @@ export function NavigationMenuDemo() {
                 </NavigationMenuLink>
               </li>
               <ListItem href='/source/buttonProps' title='Buttons'>
-                
+                Click click
               </ListItem>
               <ListItem
                 href='/api/support/submit-a-suggestion'
@@ -99,6 +99,12 @@ export function NavigationMenuDemo() {
               </ListItem>
               <ListItem href='/' title='Homepage'>
                 Home sweet Home
+              </ListItem>
+              <ListItem href='/source/localStorage' title='Local Storage (Exp)'>
+                Not enough data to save
+              </ListItem>
+              <ListItem href='/source/useMouse' title='Mouse Coordinates (Exp)'>
+                Like a gps
               </ListItem>
             </ul>
           </NavigationMenuContent>

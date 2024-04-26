@@ -13,10 +13,12 @@ interface BlobProps {
 const Blob: React.FC<BlobProps> = ({ ClientX, ClientY }) => {
   const [scroll] = useWindowScroll();
   const { x, y } = useMouse();
+
   ClientX = x - 115 + scroll.x;
   ClientY = y - 120 + scroll.y;
+
   return (
-    <div className='-z-10 absolute top-0 left-0 blur-[100px] '>
+    <div className=' absolute top-0 left-0 blur-[100px] '>
       <div
         className=' absolute bg-gradient-to-r from-purple-600/60 via-purple-600 to-pink-400 w-[300px] h-[350px] rounded-full transition animate-spin-slow'
         style={{

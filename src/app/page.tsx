@@ -10,7 +10,7 @@ export default function page() {
         <Navbar />
         <Hero />
       </main>
-      <div className="z-0">
+      <div className="z-50">
         <Blob />
       </div>
     </>

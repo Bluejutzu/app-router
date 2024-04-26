@@ -49,14 +49,31 @@
     --input: 240 3.7% 15.9%;
     --ring: 240 4.9% 83.9%;
   }
+
+  /* Dark mode colors */
+  --dark-background: 26, 32, 44; /* Example: rgb(26, 32, 44) */
+  --dark-foreground: 255, 255, 255; /* Example: rgb(255, 255, 255) */
+  /* Define other dark mode colors as needed */
+
+  /* Light mode colors */
+  --light-background: 255, 255, 255; /* Example: rgb(255, 255, 255) */
+  --light-foreground: 26, 32, 44; /* Example: rgb(26, 32, 44) */
+  /* Define other light mode colors as needed */
 }
 
 @layer base {
   * {
     @apply border-border;
   }
-  body {
-    @apply bg-background text-foreground;
+ 
+  .dark-mode {
+    /* Apply styles for dark mode */
+    @apply bg-gray-900 text-white;
+  }
+
+  .light-mode {
+    /* Apply styles for light mode */
+    @apply bg-gray-200 text-gray-900;
   }
 }
 .hover-trigger:hover + .hover-text {
@@ -64,9 +81,13 @@
 }
 
 .hover\:gradient-text:hover {
-  background-image: linear-gradient(to right, rgba(203, 64, 244, 0.6), rgba(180, 62, 232, 0.6), rgba(160, 58, 218, 0.6));
+  background-image: linear-gradient(
+    to right,
+    rgba(203, 64, 244, 0.6),
+    rgba(180, 62, 232, 0.6),
+    rgba(160, 58, 218, 0.6)
+  );
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
 }
-

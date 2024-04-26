@@ -4,6 +4,7 @@
 import React from "react";
 import { Blob, MenuBox, ScreenBox } from "@/components";
 import { useMouse } from "@mantine/hooks";
+import Link from "next/link";
 
 const Page = () => {
   const { x, y } = useMouse();
@@ -13,6 +14,11 @@ const Page = () => {
         <div className='text-white flex flex-col items-center z-10'>
           <MenuBox />
           <ScreenBox />
+          <Link
+            href='/source/useMouse/blob'
+            className='hover:text-blue-600 duration-300 text-2xl font-bold'>
+            Check out the blob
+          </Link>
         </div>
         <Blob ClientX={x} ClientY={y} />
       </div>

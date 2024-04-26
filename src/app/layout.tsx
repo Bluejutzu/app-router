@@ -27,7 +27,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={`${inter.className} bg-gray-900 `}>
+      <body className={`${inter.className} dark-mode `}>
         {/* Wrap children with MantineProvider */}
         <MantineProvider theme={theme}>{children}</MantineProvider>
         <Analytics />

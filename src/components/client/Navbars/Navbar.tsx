@@ -1,7 +1,6 @@
 /** @format */
 "use client";
-
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Dialog } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { tailwindsvg } from "../../../../public/images";
@@ -10,6 +9,8 @@ import {
   RegisterLink,
   LoginLink,
 } from "@kinde-oss/kinde-auth-nextjs/components";
+
+import { ColorScheme } from "@/components";
 
 const navigation = [
   { name: "What we offer", href: "/experiences" },
@@ -23,8 +24,8 @@ export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <div className='bg-gray-900 text-white'>
-      <header className='absolute inset-x-0 top-0 z-50 text-white'>
+    <div>
+      <header className={`absolute inset-x-0 top-0 z-50 `}>
         <nav
           className='flex items-center justify-between p-6 lg:px-8'
           aria-label='Global'>
@@ -53,12 +54,12 @@ export default function Navbar() {
               </a>
             ))}
           </div>
-          <div className='hidden lg:flex lg:flex-1 lg:justify-end text-sm'>
-            <RegisterLink className='text-black bg-gray-100 rounded-lg font-bold p-2  hover:bg-opacity-40 duration-200'>
+          <div className='hidden lg:flex lg:flex-1 lg:justify-end text-sm '>
+            <RegisterLink className='text-black bg-gray-100 rounded-lg font-bold p-2  hover:text-white hover:bg-opacity-40 duration-200 mr-2'>
               Sign up
             </RegisterLink>
 
-            <LoginLink className=' bg-gray-800 rounded-lg font-bold p-2 hover:bg-opacity-50 duration-200 '>
+            <LoginLink className=' text-white rounded-lg font-bold p-2 hover:bg-opacity-50 duration-200 '>
               Sign in
             </LoginLink>
           </div>

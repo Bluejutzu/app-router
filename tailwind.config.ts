@@ -1,4 +1,6 @@
-import type { Config } from "tailwindcss"
+/** @format */
+
+import type { Config } from "tailwindcss";
 
 const config = {
   darkMode: ["class"],
@@ -19,6 +21,19 @@ const config = {
     },
     extend: {
       colors: {
+        something: {
+          foreground: "hsl(var(--dark-background))",
+        },
+        dark: {
+          background: "hsl(var(--dark-background))",
+          foreground: "hsl(var(--dark-foreground))",
+          // Define other dark mode colors as needed
+        },
+        light: {
+          background: "hsl(var(--light-background))",
+          foreground: "hsl(var(--light-foreground))",
+          // Define other light mode colors as needed
+        },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -78,4 +93,4 @@ const config = {
   plugins: [require("tailwindcss-animate")],
 } satisfies Config;
 
-export default config
+export default config;
