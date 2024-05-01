@@ -6,7 +6,7 @@ import React from "react";
 export default function page() {
   return (
     <div className=' z-0'>
-      <NavbarForm />
+      {/*<NavbarForm />*/}
       <div className='flex justify-center text-white/70 hover:cursor-pointer z-10'>
         <a href='#data'>What happens with my submission?</a>
       </div>

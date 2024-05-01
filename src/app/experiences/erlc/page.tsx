@@ -6,7 +6,7 @@ import { ERLC, Navbar } from "@/components";
 const page = () => {
   return (
     <div>
-    <Navbar/>
+    
     <ERLC/>
     </div>
   );

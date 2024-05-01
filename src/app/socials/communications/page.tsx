@@ -8,7 +8,7 @@ export default function page() {
 
   return (
     <div>
-      <Navbar />
+      
       <div className='text-white flex flex-col h-screen'>
         <div className='flex-grow flex items-center lg:justify-center lg:ml-10 sm:justify-center select-auto'>
           
