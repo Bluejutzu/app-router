@@ -33,10 +33,8 @@ export default async function RootLayout({
 
   if (!user) {
     isAuthed = false;
-    console.log(isAuthed);
   } else {
     isAuthed = true;
-    console.log(isAuthed);
   }
 
   return (
