@@ -5,16 +5,13 @@ import { Dialog } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { tailwindsvg } from "../../../../public/images";
 import Image from "next/image";
-import {
-  LogoutLink,
-} from "@kinde-oss/kinde-auth-nextjs/components";
-
+import { LogoutLink } from "@kinde-oss/kinde-auth-nextjs/components";
 
 const navigation = [
   { name: "What we offer", href: "/experiences" },
   { name: "Communications", href: "/socials/communications" },
   { name: "About Us", href: "/socials/about-us" },
-  { name: "Suggestions!", href: "/api/support/submit-a-suggestion" },
+  { name: "Suggestions!", href: "/support/suggestion" },
   { name: "Sources", href: "/source" },
 ];
 
@@ -97,10 +94,11 @@ export default function Navbar() {
                 <div className='py-5 text-gray-100/70'>
                   Account management
                   <br />
-                  <LogoutLink postLogoutRedirectURL="/" className='-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-white hover:bg-gray-50 hover:text-black duration-300'>
+                  <LogoutLink
+                    postLogoutRedirectURL='/'
+                    className='-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-white hover:bg-gray-50 hover:text-black duration-300'>
                     Log Out
                   </LogoutLink>
-                  
                 </div>
               </div>
             </div>

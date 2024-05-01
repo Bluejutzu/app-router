@@ -12,7 +12,7 @@ const navigation = [
   { name: "What we offer", href: "/experiences" },
   { name: "Communications", href: "/socials/communications" },
   { name: "About Us", href: "/socials/about-us" },
-  { name: "Suggestions!", href: "/api/support/submit-a-suggestion" },
+  { name: "Suggestions!", href: "/support/suggestion" },
 ];
 
 export default function NavbarForm() {
