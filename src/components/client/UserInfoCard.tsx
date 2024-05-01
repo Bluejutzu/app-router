@@ -55,7 +55,7 @@ export default function UserInfoCard({ userData }: { userData: UserInfo }) {
   }
 
   return (
-    <div className='bg-gradient-to-r hover:from-[#252a3f] hover:to-[#423555] duration-300 rounded-lg shadow-md p-6'>
+    <div className='bg-gradient-to-r hover:from-[#252a3f] hover:to-[#423555] rounded-lg shadow-md p-6 '>
       <div className='text-center mt-4'>
         {successMessage && (
           <p
@@ -70,6 +70,7 @@ export default function UserInfoCard({ userData }: { userData: UserInfo }) {
         {editingUsername ? (
           <>
             <input
+              className='text-black'
               type='text'
               placeholder={userData.username}
               value={newUsername}

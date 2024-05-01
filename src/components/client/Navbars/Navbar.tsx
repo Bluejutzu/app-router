@@ -1,6 +1,6 @@
 /** @format */
 "use client";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Dialog } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { tailwindsvg } from "../../../../public/images";
@@ -9,8 +9,6 @@ import {
   RegisterLink,
   LoginLink,
 } from "@kinde-oss/kinde-auth-nextjs/components";
-
-import { ColorScheme } from "@/components";
 
 const navigation = [
   { name: "What we offer", href: "/experiences" },
@@ -56,11 +54,11 @@ export default function Navbar() {
           </div>
           <div className='hidden lg:flex lg:flex-1 lg:justify-end text-sm '>
             <RegisterLink className='text-black bg-gray-100 rounded-lg font-bold p-2  hover:text-white hover:bg-opacity-40 duration-200 mr-2'>
-              Sign up
+              Sign Up
             </RegisterLink>
 
             <LoginLink className=' text-white rounded-lg font-bold p-2 hover:bg-opacity-50 duration-200 '>
-              Sign in
+               Sign In
             </LoginLink>
           </div>
         </nav>

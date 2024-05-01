@@ -11,10 +11,11 @@ export default function page() {
         <a href='#data'>What happens with my submission?</a>
       </div>
       <div className='flex text-white/60 content-center items-center justify-center mt-4 text-lg'>
-        All submissions are managed by the site owner. The data will be saved
+        Submissions have been disabled until further notice. This can be proven by checking the Network tab on the console.
+        {/*All submissions are managed by the site owner. The data will be saved
         and displayed in a private server.
         <br /> Do not input personal information (Passwords, Identification for
-        any sites...)
+        any sites...)*/}
       </div>
     </div>
   );

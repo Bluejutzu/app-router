@@ -16,7 +16,10 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-import ModalWrapper from "./games/Attention";
+import { Button } from "../ui/button";
+import { ToastSimple } from "./Toast";
+
+let isValid: boolean;
 
 const FormSchema = z.object({
   username: z.string().min(1, {
@@ -36,36 +39,52 @@ export function InputForm() {
     },
   });
 
-  async function onSubmit(data: z.infer<typeof FormSchema>) {
-    try {
-      const username = data.username;
-      const suggestion = data.suggestion;
-
-      const token =
-        "6yHjJbFteB7AlzjrSyYtZGusNv8ykqo7Cx0oELkpJPGZW7lvyN3pr46tqYYxj-Z2wNaa";
-      const url = `https://discord.com/api/v10/webhooks/1216394063721529434/${token}`;
-
-      const params = {
-        username: username,
-        content: suggestion,
-      };
-      const headers = {
-        "Content-Type": "application/json",
-      };
-
-      const req = await axios
-        .post(url, params, {
-          headers,
-        })
-        .catch((error) => {
-          console.error("An error occured:", error);
-        });
-    } catch (error) {
-      console.log(error);
+  async function checkValidInput() {
+    if (!form.formState.isSubmitSuccessful) {
+      isValid = false;
+      console.log("Form state is ", isValid);
+    } else {
+      isValid = true;
+      console.log("Form state is ", isValid);
     }
-    console.log(
-      `You submitted the following values: \n ${JSON.stringify(data)}`
-    );
+  }
+
+  async function onSubmit(data: z.infer<typeof FormSchema>) {
+    checkValidInput();
+    /*if (!isValid) {
+      console.log("Resolver requirements were not met.");
+      return; // Exit early if there are validation errors
+    } else {
+      try {
+        const username = data.username;
+        const suggestion = data.suggestion;
+
+        const token =
+          "6yHjJbFteB7AlzjrSyYtZGusNv8ykqo7Cx0oELkpJPGZW7lvyN3pr46tqYYxj-Z2wNaa";
+        const url = `https://discord.com/api/v10/webhooks/1216394063721529434/${token}`;
+
+        const params = {
+          username: username,
+          content: suggestion,
+        };
+        const headers = {
+          "Content-Type": "application/json",
+        };
+
+        const req = await axios
+          .post(url, params, {
+            headers,
+          })
+          .catch((error) => {
+            console.error("An error occured:", error);
+          });
+      } catch (error) {
+        console.log(error);
+      }
+      console.log(
+        `You submitted the following values: \n ${JSON.stringify(data)}`
+      );
+    }*/
   }
 
   return (
@@ -111,8 +130,7 @@ export function InputForm() {
             </FormItem>
           )}
         />
-
-        <ModalWrapper />
+        <Button type='submit'>Submit</Button>
       </form>
     </Form>
   );
